@@ -1,4 +1,7 @@
 import { test } from './variables';
+import json from './assets/json';
+
+import './styles/styles.css';
 
 console.log(test);
 
@@ -10,3 +13,5 @@ btnRef.addEventListener('click', () => {
   counter++;
   counterRef.textContent = counter;
 });
+
+console.log('JSON', json);
