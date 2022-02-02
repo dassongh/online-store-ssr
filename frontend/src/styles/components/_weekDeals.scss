@@ -1,0 +1,92 @@
+.weekDeals {
+  background-color: #c4c4c4;
+  padding: 65px 0 365px;
+  position: relative;
+}
+
+.weekDeals__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weekDeals__sale {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.weekDeals__sale-text {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  text-align: center;
+}
+
+.weekDeals__heading {
+  font-family: 'LobsterTwo';
+  font-weight: 400;
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.weekDeals__time-list {
+  display: flex;
+  margin-right: -10px;
+}
+
+.weekDeals__time-item {
+  position: relative;
+  margin-right: 50px;
+}
+
+.weekDeals__time-info {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.weekDeals__number {
+  font-weight: 500;
+  font-size: 36px;
+  color: white;
+  margin-right: 10px;
+}
+
+.weekDeals__time-text {
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+}
+
+.weekDeals__main {
+  position: absolute;
+  width: 1410px;
+  background-color: white;
+  padding: 33px 30px 30px;
+  top: 380px;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 5px 35px rgba(138, 159, 168, 0.2);
+}
+
+.weekDeals__main-list {
+  display: flex;
+}
+.weekDeals__main-item {
+  margin-right: 30px;
+}
+
+.weekDeals__main-thumb {
+  width: 315px;
+  height: 316px;
+  background-color: #fafafa;
+  margin-bottom: 30px;
+}

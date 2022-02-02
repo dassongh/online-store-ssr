@@ -1,0 +1,39 @@
+.contacts {
+  padding: 200px 0 60px;
+  position: relative;
+}
+
+.contacts-list {
+  display: flex;
+  position: absolute;
+  top: -140px;
+}
+
+.contacts-item {
+  width: 274px;
+  height: 274px;
+  background-color: #f5f5f5;
+  border: 10px solid white;
+  border-right: 5px solid white;
+  border-left: 5px solid white;
+
+  &:first-child {
+    border-left: 10px solid white;
+  }
+
+  &:last-child {
+    border-right: 10px solid white;
+  }
+
+  & p {
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &--active {
+    background-color: #60a00c;
+    padding: 111px 0 111px;
+  }
+}

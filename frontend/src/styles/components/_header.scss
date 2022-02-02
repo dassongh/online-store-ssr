@@ -49,15 +49,15 @@
 
 .header__contacts-item {
   padding: 7px;
-}
 
-.header__contacts-item:first-child {
-  margin-right: 30px;
-}
+  &:first-child {
+    margin-right: 30px;
+  }
 
-.header__contacts-item:nth-child(2n) {
-  padding-left: 30px;
-  border-left: 1px solid white;
+  &:nth-child(2n) {
+    padding-left: 30px;
+    border-left: 1px solid white;
+  }
 }
 
 /* header-main */
@@ -82,26 +82,26 @@
 
   color: #111111;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #88b13e;
+  }
 }
 
 .header__link--current {
   position: relative;
   color: #88b13e;
-}
 
-.header__link:hover {
-  color: #88b13e;
-}
-
-.header__link--current::after {
-  position: absolute;
-  top: 52px;
-  left: -8px;
-  content: '';
-  width: 63px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #88b13e;
+  &::after {
+    position: absolute;
+    top: 52px;
+    left: -8px;
+    content: '';
+    width: 63px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #88b13e;
+  }
 }
 
 .header__icons {
@@ -115,10 +115,10 @@
 .header__icon-main {
   fill: black;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.header__icon-main:hover {
-  fill: #88b13e;
+  &:hover {
+    fill: #88b13e;
+  }
 }
 
 .logo {
@@ -128,4 +128,9 @@
   font-family: 'LobsterTwo';
   font-weight: 400;
   font-size: 42px;
+}
+
+.collection {
+  padding: 210px 0 70px;
+  position: relative;
 }
