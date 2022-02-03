@@ -73,6 +73,10 @@
 
 .header__link-item {
   margin-right: 40px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-right: 15px;
+  }
 }
 
 .header__link {
@@ -128,6 +132,16 @@
   font-family: 'LobsterTwo';
   font-weight: 400;
   font-size: 42px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-right: 90px;
+    margin-left: 40px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    margin-left: 20px;
+    margin-right: 245px;
+  }
 }
 
 .collection {

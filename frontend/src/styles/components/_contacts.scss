@@ -7,6 +7,14 @@
   display: flex;
   position: absolute;
   top: -140px;
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    top: -100px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    top: -70px;
+  }
 }
 
 .contacts-item {
@@ -36,12 +44,37 @@
     background-color: #60a00c;
     padding: 111px 0 111px;
   }
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    width: 198px;
+    height: 200px;
+
+    &--active {
+      padding: 0;
+      padding-top: 70px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 147px;
+    height: 149px;
+
+    &--active {
+      padding: 0;
+      padding-top: 30px;
+    }
+  }
 }
 
 .contacts__main {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .contacts__thumb {
@@ -57,6 +90,10 @@
 
 .contacts__call-info {
   display: flex;
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    margin-bottom: 30px;
+  }
 }
 
 .contacts__mail-info {

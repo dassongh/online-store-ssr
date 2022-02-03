@@ -35,6 +35,16 @@
   &:hover .collection__quantity {
     color: white;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding: 10px 10px;
+    width: 145px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    padding: 20px 40px;
+    width: 198px;
+  }
 }
 
 .collection__picture {
@@ -42,6 +52,10 @@
   height: 120px;
   background-color: #fafafa;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 125px;
+  }
 }
 
 .collection-link {
