@@ -1,6 +1,6 @@
 .weekDeals {
   background-color: #c4c4c4;
-  padding: 65px 0 365px;
+  padding: 65px 0 280px;
   position: relative;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -73,10 +73,10 @@
 
 .weekDeals__main {
   position: absolute;
-  width: 1410px;
+  width: 1380px;
   background-color: white;
   padding: 33px 30px 30px;
-  top: 380px;
+  top: 300px;
   border: 1px solid #f2f2f2;
   box-shadow: 0px 5px 35px rgba(138, 159, 168, 0.2);
 
@@ -101,8 +101,8 @@
 }
 
 .weekDeals__main-thumb {
-  width: 315px;
-  height: 316px;
+  width: 308px;
+  height: 310px;
   background-color: #fafafa;
   margin-bottom: 30px;
 

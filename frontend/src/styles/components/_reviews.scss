@@ -3,24 +3,28 @@
   background-color: #f5f5f5;
 }
 
-.reviews__slider-item {
+.reviews__list {
+  display: flex;
+}
+
+.reviews__item {
   padding: 40px 50px 40px 70px;
   background-color: white;
   margin-right: 30px;
 }
 
-.reviews__slider-text {
+.reviews__text {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.67;
   margin-bottom: 35px;
 }
 
-.reviews__slider-person {
+.reviews__person {
   display: flex;
 }
 
-.reviews__slider-picture {
+.reviews__picture {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -28,18 +32,18 @@
   margin-right: 25px;
 }
 
-.reviews__slider-person-info {
+.reviews__person-info {
   display: flex;
   flex-direction: column;
 }
 
-.reviews__slider-name {
+.reviews__name {
   font-family: 'LobsterTwo';
   font-weight: 400;
   font-size: 21px;
 }
 
-.reviews__slider-location {
+.reviews__location {
   font-weight: 500;
   font-size: 15px;
   color: #888888;

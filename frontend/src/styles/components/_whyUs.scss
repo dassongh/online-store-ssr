@@ -31,8 +31,13 @@
 
 .whyUs__collection-svg {
   position: absolute;
-  top: 20px;
+  top: 0;
+  left: 10px;
   fill: #fda72f;
+
+  &--last {
+    left: -5px;
+  }
 }
 
 .whyUs__collection-element {

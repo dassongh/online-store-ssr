@@ -1,3 +1,8 @@
+.collection {
+  padding: 210px 0 50px;
+  position: relative;
+}
+
 .collection__choice-link--current {
   &::after {
     content: none;
@@ -83,27 +88,4 @@
   font-family: 'LobsterTwo';
   font-weight: 400;
   font-size: 42px;
-}
-
-.thumb {
-  width: 258px;
-  height: 258px;
-  background-color: #fafafa;
-  margin-bottom: 30px;
-}
-
-.collection__choice-text {
-  font-weight: 500;
-  font-size: 15px;
-  text-align: center;
-}
-
-.collection__choice-price {
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
-}
-
-.owl-card {
-  width: 258px;
 }
