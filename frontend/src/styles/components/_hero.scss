@@ -1,6 +1,10 @@
 .hero {
   padding: 155px 0 285px;
   background-color: #99ecfe;
+
+  @media screen and (max-width: 767px) {
+    padding: 100px 0 235px;
+  }
 }
 
 .hero__text {
@@ -9,6 +13,10 @@
   text-transform: uppercase;
   letter-spacing: 0.5em;
   color: #60a00c;
+
+  @media screen and (max-width: 767px) {
+    font-size: 13px;
+  }
 }
 
 .hero__heading {
@@ -19,6 +27,11 @@
   width: 515px;
   margin-top: 10px;
   margin-bottom: 35px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+    width: 300px;
+  }
 }
 
 .button {

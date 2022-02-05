@@ -18,7 +18,7 @@
     margin-left: 30px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  @media screen and (max-width: 1023px) {
     margin-right: 5px;
     margin-left: 0;
 
@@ -43,6 +43,10 @@
 .whyUs__collection-element {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 }
 
 .whyUs__collection-heading {
@@ -53,6 +57,10 @@
 
   &--last {
     text-align: right;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 17px;
   }
 }
 
@@ -68,10 +76,20 @@
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     width: 280px;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 13px;
+    width: 240px;
+  }
 }
 
 .whyUs__collection {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
 }

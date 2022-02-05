@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <div class="header__top-bg">
+      <div class="header__top-bg header__container-mobile not-visible" data-menu>
         <div class="container">
           <div class="header__top">
             <ul class="header__contacts">
@@ -36,7 +36,7 @@
               <li class="header__contacts-item">
                 <a href="mailto:organicfood@gmail.com">
                   <svg class="icon header__icon" viewBox="0 0 15 17" width="15px" height="15px">
-                    <g clip-path="url(#a)" fill="#black">
+                    <g fill="#black">
                       <path
                         d="m13.169 2.2715h-11.335c-1.0118 0-1.8343 0.86985-1.8343 1.9399v8.193c0 1.07 0.82247 1.9399 1.8343 1.9399h11.331c1.0118 0 1.8343-0.8699 1.8343-1.9399v-8.1897c0.0031-1.0701-0.8194-1.9432-1.8312-1.9432zm0.9963 10.133c0 0.5809-0.4469 1.0536-0.9963 1.0536h-11.335c-0.54934 0-0.99627-0.4727-0.99627-1.0536v-8.1897c0-0.58099 0.44693-1.0537 0.99627-1.0537h11.331c0.5494 0 0.9963 0.47267 0.9963 1.0537v8.1897h0.0031z"
                       />
@@ -80,8 +80,16 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container header__container-mobile not-visible" data-menu>
         <div class="header__main">
+          <button class="btn-open btn-open--close" data-close>
+            <svg fill="none" viewBox="0 0 19 19" width="19px" height="19px">
+              <path
+                d="m18.667 1.88-1.88-1.88-7.4534 7.4533-7.4533-7.4533-1.88 1.88 7.4533 7.4533-7.4533 7.4534 1.88 1.88 7.4533-7.4534 7.4534 7.4534 1.88-1.88-7.4534-7.4534 7.4534-7.4533z"
+                fill="#212121"
+              />
+            </svg>
+          </button>
           <ul class="header__links">
             <li class="header__link-item">
               <a class="header__link header__link--current" href="./index.html">Home</a>
@@ -131,6 +139,21 @@
               </a>
             </li>
           </ul>
+        </div>
+      </div>
+      <div class="container header__container">
+        <div class="header__main-mobile">
+          <h2 class="logo header__logo">OrgaFresh</h2>
+          <button class="btn-open" data-open>
+            <svg fill="none" viewBox="0 0 24 16" width="24px" height="16px">
+              <path
+                d="M0 2.66667V0H24V2.66667H0ZM0 9.33333H24V6.66667H0V9.33333ZM0 16H24V13.3333H0V16Z"
+                clip-rule="evenodd"
+                fill="#000"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -191,23 +214,23 @@
           <div class="collection__choice">
             <div class="collection__choice-top">
               <h2 class="collection__heading">Arriwal Organic</h2>
-              <ul class="header__links">
-                <li class="header__link-item">
+              <ul class="header__links collection__links">
+                <li class="header__link-item collection__item">
                   <a href="" class="header__link header__link--current collection__choice-link--current">All</a>
                 </li>
-                <li class="header__link-item">
+                <li class="header__link-item collection__item">
                   <a href="" class="header__link">Meats</a>
                 </li>
-                <li class="header__link-item">
+                <li class="header__link-item collection__item">
                   <a href="" class="header__link">Vegetables</a>
                 </li>
-                <li class="header__link-item">
+                <li class="header__link-item collection__item">
                   <a href="" class="header__link">Grain</a>
                 </li>
-                <li class="header__link-item">
+                <li class="header__link-item collection__item">
                   <a href="" class="header__link">Fruits</a>
                 </li>
-                <li class="header__link-item">
+                <li class="header__link-item collection__item">
                   <a href="" class="header__link">Other</a>
                 </li>
               </ul>
@@ -1107,23 +1130,23 @@
         <div class="container">
           <div class="collection__choice-top">
             <h2 class="collection__heading">Feature Products</h2>
-            <ul class="header__links">
-              <li class="header__link-item">
+            <ul class="header__links collection__links">
+              <li class="header__link-item collection__item">
                 <a href="" class="header__link header__link--current collection__choice-link--current">All</a>
               </li>
-              <li class="header__link-item">
+              <li class="header__link-item collection__item">
                 <a href="" class="header__link">Meats</a>
               </li>
-              <li class="header__link-item">
+              <li class="header__link-item collection__item">
                 <a href="" class="header__link">Vegetables</a>
               </li>
-              <li class="header__link-item">
+              <li class="header__link-item collection__item">
                 <a href="" class="header__link">Grain</a>
               </li>
-              <li class="header__link-item">
+              <li class="header__link-item collection__item">
                 <a href="" class="header__link">Fruits</a>
               </li>
-              <li class="header__link-item">
+              <li class="header__link-item collection__item">
                 <a href="" class="header__link">Other</a>
               </li>
             </ul>

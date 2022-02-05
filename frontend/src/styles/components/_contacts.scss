@@ -1,6 +1,10 @@
 .contacts {
   padding: 200px 0 60px;
   position: relative;
+
+  @media screen and (max-width: 767px) {
+    padding: 320px 0 60px;
+  }
 }
 
 .contacts-list {
@@ -14,6 +18,10 @@
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     top: -70px;
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
   }
 }
 
@@ -55,7 +63,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  @media screen and (max-width: 1023px) {
     width: 147px;
     height: 149px;
 
@@ -71,9 +79,8 @@
   justify-content: space-between;
   margin-top: 30px;
 
-  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+  @media screen and (max-width: 1409px) {
     flex-wrap: wrap;
-    justify-content: center;
   }
 }
 
@@ -86,6 +93,11 @@
   align-items: center;
   justify-content: center;
   margin-right: 30px;
+
+  @media screen and (max-width: 767px) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 }
 
 .contacts__call-info {
@@ -93,11 +105,32 @@
 
   @media screen and (min-width: 1024px) and (max-width: 1409px) {
     margin-bottom: 30px;
+    margin-left: 170px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-bottom: 30px;
+    margin-left: 100px;
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
   }
 }
 
 .contacts__mail-info {
   display: flex;
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    margin-left: 170px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-left: 100px;
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .contacts__heading {
@@ -109,6 +142,10 @@
 
 .contacts__text {
   font-size: 15px;
+
+  @media screen and (max-width: 767px) {
+    width: 300px;
+  }
 }
 
 .contacts__number {
@@ -121,6 +158,10 @@
 .contacts__form {
   display: flex;
   margin-top: 20px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 }
 
 .contacts__input {
@@ -149,5 +190,9 @@
 
   &:hover {
     background-color: #fcbbcf;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 12px 0 13px;
   }
 }

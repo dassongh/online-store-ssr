@@ -6,6 +6,10 @@
 .offers__list {
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 }
 
 .offers__heading {
@@ -22,6 +26,13 @@
 
   &:first-child {
     margin-right: 120px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 }
 
