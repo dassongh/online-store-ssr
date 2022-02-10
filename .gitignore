@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # package-lock
-.lock
+.package-lock
