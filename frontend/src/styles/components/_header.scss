@@ -1,0 +1,268 @@
+.icon {
+  fill: white;
+}
+
+/* header */
+/* header-top */
+.header__top-bg {
+  background-color: #88b13e;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__contacts {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.header__switch {
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: none;
+
+  color: white;
+
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.header__switch-item {
+  display: flex;
+  align-items: center;
+}
+
+.header__contacts a {
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: none;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+.header__icon {
+  margin-right: 7px;
+}
+
+.header__contacts-item {
+  padding: 7px;
+
+  &:first-child {
+    margin-right: 30px;
+  }
+
+  &:nth-child(2n) {
+    padding-left: 30px;
+    border-left: 1px solid white;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:first-child {
+      padding-bottom: 5px;
+      border-bottom: 1px solid white;
+      margin-right: 0;
+    }
+
+    &:nth-child(2n) {
+      padding-left: 5px;
+      border-left: none;
+    }
+  }
+}
+
+/* header-main */
+// header {
+//   position: fixed;
+//   background-color: white;
+// }
+
+.header__links {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+.header__main {
+  display: flex;
+  align-items: center;
+  padding: 18px 0 18px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 40px;
+    position: relative;
+  }
+}
+
+.header__link-item {
+  margin-right: 40px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-right: 15px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.header__link {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+
+  color: #111111;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #88b13e;
+  }
+}
+
+.header__link--current {
+  position: relative;
+  color: #88b13e;
+
+  &::after {
+    position: absolute;
+    top: 52px;
+    left: -8px;
+    content: '';
+    width: 63px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #88b13e;
+  }
+
+  @media screen and (max-width: 767px) {
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.header__icons {
+  display: flex;
+}
+
+.header__icons-item {
+  margin-left: 25px;
+
+  @media screen and (max-width: 767px) {
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.header__icon-main {
+  fill: black;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    fill: #88b13e;
+  }
+}
+
+.logo {
+  margin-left: 214px;
+  margin-right: 440px;
+
+  font-family: 'LobsterTwo';
+  font-weight: 400;
+  font-size: 42px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-right: 90px;
+    margin-left: 40px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    margin-left: 20px;
+    margin-right: 245px;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    margin: 0;
+  }
+}
+
+.header__logo {
+  display: block;
+  font-size: 26px;
+}
+
+.header__container {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header__container-mobile {
+  @media screen and (max-width: 767px) {
+    transform: translateY(-1000px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.header__container-closed {
+  position: absolute;
+  transform: translate(1000px);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header__main-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0 15px;
+}
+
+.btn-open {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--close {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.not-visible {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+  }
+}

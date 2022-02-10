@@ -1,0 +1,81 @@
+.reviews {
+  padding: 80px 0 235px;
+  background-color: #f5f5f5;
+}
+
+.reviews__list {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+}
+
+.reviews__item {
+  padding: 40px 50px 40px 70px;
+  background-color: white;
+  margin-right: 30px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding: 20px 30px 20px 50px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 5px 10px 5px 20px;
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
+}
+
+.reviews__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.67;
+  margin-bottom: 35px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    font-size: 15px;
+  }
+}
+
+.reviews__person {
+  display: flex;
+}
+
+.reviews__picture {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  margin-right: 25px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.reviews__person-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__name {
+  font-family: 'LobsterTwo';
+  font-weight: 400;
+  font-size: 21px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    font-size: 18px;
+  }
+}
+
+.reviews__location {
+  font-weight: 500;
+  font-size: 15px;
+  color: #888888;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    font-size: 12px;
+  }
+}
