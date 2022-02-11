@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <title>Webpack set up</title>
+    <title>OrgaFresh</title>
   </head>
   <body>
     <header>
@@ -95,7 +95,14 @@
               <a class="header__link header__link--current" href="./index.html">Home</a>
             </li>
             <li class="header__link-item">
-              <a class="header__link" href="">Shop</a>
+              <a class="header__link header__link-flex" href="" data-link>
+                Shop
+                <svg enable-background="new 0 0 330 330" version="1.1" viewBox="0 0 330 330" width="12px" height="12px">
+                  <path
+                    d="m325.61 79.393c-5.857-5.857-15.355-5.858-21.213 1e-3l-139.39 139.39-139.4-139.39c-5.857-5.857-15.355-5.858-21.213 1e-3 -5.858 5.858-5.858 15.355 0 21.213l150 150c2.813 2.813 6.628 4.393 10.606 4.393s7.794-1.581 10.606-4.394l150-150c5.859-5.857 5.859-15.355 1e-3 -21.213z"
+                  />
+                </svg>
+              </a>
             </li>
             <li class="header__link-item">
               <a class="header__link" href="">About</a>
@@ -141,6 +148,37 @@
           </ul>
         </div>
       </div>
+
+      <div class="drop-down drop-down--non-visible" data-dropDown>
+        <ul class="drop-down__list">
+          <p class="drop-down__heading">Categories</p>
+          <li class="drop-down__sub-list">
+            <ul class="drop-down__sub-list__list drop-down__sub-list__list--first">
+              <li class="drop-down__item"><a class="header__link drop-down__link" href="">Fresh fruits</a></li>
+              <li class="drop-down__item"><a class="header__link drop-down__link" href="">Fresh Vegetables</a></li>
+              <li class="drop-down__item"><a class="header__link drop-down__link" href="">Fresh Meats</a></li>
+            </ul>
+            <ul class="drop-down__sub-list__list">
+              <li class="drop-down__item"><a class="header__link drop-down__link" href="">Grain & nuts</a></li>
+              <li class="drop-down__item"><a class="header__link drop-down__link" href="">Smoothies</a></li>
+              <li class="drop-down__item"><a class="header__link drop-down__link" href="">Top sales</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="drop-down__list">
+          <p class="drop-down__heading">Shop Layout</p>
+          <li class="drop-down__item"><a class="header__link drop-down__link" href="">Shop Grid Fullwidth</a></li>
+          <li class="drop-down__item"><a class="header__link drop-down__link" href="">Shop Grid Sidebar</a></li>
+          <li class="drop-down__item"><a class="header__link drop-down__link" href="">Shop List Sidebar</a></li>
+        </ul>
+        <ul class="drop-down__list drop-down__list--last">
+          <p class="drop-down__heading">Shop Pages</p>
+          <li class="drop-down__item"><a class="header__link drop-down__link" href="">Cart</a></li>
+          <li class="drop-down__item"><a class="header__link drop-down__link" href="">Checkout</a></li>
+          <li class="drop-down__item"><a class="header__link drop-down__link" href="">Wishlist</a></li>
+        </ul>
+      </div>
+
       <div class="container header__container">
         <div class="header__main-mobile">
           <h2 class="logo header__logo">OrgaFresh</h2>
