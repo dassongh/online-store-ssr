@@ -8,3 +8,13 @@ refs.link.addEventListener('click', e => {
 
   refs.menu.classList.toggle('drop-down--non-visible');
 });
+
+document.addEventListener(
+  'click',
+  e => {
+    if (e.target !== refs.menu && e.target !== refs.link) {
+      refs.menu.classList.add('drop-down--non-visible');
+    }
+  },
+  true,
+);
