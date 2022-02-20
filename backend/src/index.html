@@ -210,7 +210,9 @@
           <ul class="collection__categories">
             <li class="collection__categories-item">
               <a href="" class="collection-link">
-                <div class="collection__picture"></div>
+                <div class="collection__picture">
+                  <img src="./assets/categories/vegetables.jpg" alt="vegetables" />
+                </div>
                 <h3 class="collection__name">Vegetables</h3>
                 <p class="collection__quantity">214 items</p>
               </a>
@@ -218,7 +220,9 @@
 
             <li class="collection__categories-item">
               <a href="" class="collection-link">
-                <div class="collection__picture"></div>
+                <div class="collection__picture">
+                  <img src="./assets/categories/fruits.jpg" alt="fruits" />
+                </div>
                 <h3 class="collection__name">Fresh Fruits</h3>
                 <p class="collection__quantity">214 items</p>
               </a>
@@ -226,7 +230,9 @@
 
             <li class="collection__categories-item">
               <a href="" class="collection-link">
-                <div class="collection__picture"></div>
+                <div class="collection__picture">
+                  <img src="./assets/categories/grainAndNuts.jpg" alt="grainAndNuts" />
+                </div>
                 <h3 class="collection__name">Grain & Nuts</h3>
                 <p class="collection__quantity">214 items</p>
               </a>
@@ -234,7 +240,9 @@
 
             <li class="collection__categories-item">
               <a href="" class="collection-link">
-                <div class="collection__picture"></div>
+                <div class="collection__picture">
+                  <img src="./assets/categories/meats.jpg" alt="meats" />
+                </div>
                 <h3 class="collection__name">Fresh Meats</h3>
                 <p class="collection__quantity">214 items</p>
               </a>
@@ -242,7 +250,9 @@
 
             <li class="collection__categories-item">
               <a href="" class="collection-link">
-                <div class="collection__picture"></div>
+                <div class="collection__picture">
+                  <img src="./assets/categories/smoothie.jpg" alt="smoothie" />
+                </div>
                 <h3 class="collection__name">Fresh Smootthie</h3>
                 <p class="collection__quantity">214 items</p>
               </a>
@@ -254,22 +264,27 @@
               <h2 class="collection__heading">Arriwal Organic</h2>
               <ul class="header__links collection__links">
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link header__link--current collection__choice-link--current">All</a>
+                  <a
+                    href=""
+                    class="header__link header__link--current collection__choice-link--current"
+                    data-category="all"
+                    >All</a
+                  >
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link">Meats</a>
+                  <a href="" class="header__link" data-category="meats">Meats</a>
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link">Vegetables</a>
+                  <a href="" class="header__link" data-category="vegetables">Vegetables</a>
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link">Grain</a>
+                  <a href="" class="header__link" data-category="grainAndNuts">Grain</a>
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link">Fruits</a>
+                  <a href="" class="header__link" data-category="fruits">Fruits</a>
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link">Other</a>
+                  <a href="" class="header__link" data-category="all">Other</a>
                 </li>
               </ul>
             </div>
@@ -278,7 +293,12 @@
               <div class="owl-carousel">
                 <div class="owl-card">
                   <div class="thumb">
-                    <div class="thumb__discount"><span class="thumb__discount-number">-20%</span></div>
+                    <div class="thumb__discount thumb__discount--both">
+                      <span class="thumb__discount-number">-20%</span>
+                    </div>
+                    <div class="thumb__discount thumb__discount--both-new">
+                      <span class="thumb__discount-number">new</span>
+                    </div>
                     <button class="thumb__like-btn">
                       <svg fill="none" viewBox="0 0 15 15" width="15px" height="14px">
                         <path

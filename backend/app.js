@@ -1,23 +1,23 @@
 const path = require('path');
-
 const express = require('express');
 const app = express();
+
 const hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerHelper('isFiveStar', value => value === 5);
+hbs.registerHelper('isFourStar', value => value === 4);
+hbs.registerHelper('isThreeStar', value => value === 3);
+hbs.registerHelper('isSaleAndNew', (oldPrice, isNew) => oldPrice && isNew);
 
-app.use(express.static('dist'));
-app.use(express.json());
-app.use(express.urlencoded());
+const hpRouter = require('./services/HP');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.get('/home', (req, res, next) => {
-  res.render('main', {
-    product: 'Vegetables',
-    price: '$12.0',
-    quantity: '2',
-  });
-});
+app.use(express.static('dist'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.listen(3030);
+app.use('/', hpRouter);
+
+app.listen(3000);

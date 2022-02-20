@@ -292,7 +292,6 @@
 .drop-down {
   position: absolute;
   left: 70px;
-  width: 755px;
   background-color: white;
   padding: 40px 60px 30px 40px;
   display: flex;
@@ -302,13 +301,12 @@
   }
 
   @media screen and (max-width: 1023px) {
-    width: 600px;
     padding: 20px 30px 15px 20px;
   }
 
   @media screen and (max-width: 767px) {
     width: 100%;
-    padding: 20px 10px 15px 10px;
+    padding: 30px;
     left: 0;
     top: 90px;
   }

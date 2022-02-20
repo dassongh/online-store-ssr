@@ -20,8 +20,6 @@ const optimization = () => {
   return config;
 };
 
-const filename = ext => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`);
-
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
@@ -29,7 +27,7 @@ module.exports = {
     main: ['@babel/polyfill', './index.js'],
   },
   output: {
-    filename: filename('js'),
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   optimization: optimization(),
@@ -54,7 +52,7 @@ module.exports = {
       ],
     }),
     new MiniCSSExtractPlugin({
-      filename: filename('css'),
+      filename: '[name].css',
     }),
   ],
   module: {

@@ -15,7 +15,6 @@
   height: 258px;
   background-color: #fafafa;
   margin-bottom: 15px;
-  padding-top: 12px;
 
   @media screen and (max-width: 1023px) {
     height: 158px;
@@ -34,10 +33,30 @@
   left: 50%;
   transform: translate(-50%);
 
+  &--sale {
+    background-color: #3d93e2;
+  }
+
+  &--both {
+    left: 62%;
+
+    @media screen and (max-width: 767px) {
+      left: 66%;
+    }
+  }
+
+  &--both-new {
+    left: 38%;
+    background-color: #3d93e2;
+
+    @media screen and (max-width: 767px) {
+      left: 34%;
+    }
+  }
+
   @media screen and (max-width: 1023px) {
     width: 38px;
     height: 10px;
-    font-size: 12px;
     top: -5px;
   }
 }
@@ -51,15 +70,17 @@
   color: #ffffff;
 
   @media screen and (max-width: 1023px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
 .thumb__like-btn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
   height: 35px;
   width: 35px;
   border: 1px solid rgba($color: #111111, $alpha: 0.1);
-  margin: 0 10px 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
