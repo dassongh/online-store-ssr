@@ -11,8 +11,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 5,
     quantity: 20,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 12,
@@ -25,22 +26,24 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 3,
     quantity: 2,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 74,
     title: 'Wine - Vineland Estate Semi - Dry',
     price: '$16.28',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 5,
     quantity: 16,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 28,
@@ -53,8 +56,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 3,
     quantity: 2,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 29,
@@ -67,8 +71,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 3,
     quantity: 4,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 5,
@@ -81,8 +86,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 20,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 49,
@@ -96,8 +102,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 5,
     quantity: 19,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 47,
@@ -111,8 +118,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 5,
     quantity: 12,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 95,
@@ -123,26 +131,28 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 3,
     quantity: 7,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 96,
     title: 'Cod - Black Whole Fillet',
     price: '$11.79',
-    old_price: null,
+    old_price: '$17.99',
     category: 'smoothies',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 3,
     quantity: 4,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: true,
+    isFeatureProduct: false,
   },
   {
     id: 85,
@@ -153,11 +163,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 10,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 21,
@@ -170,8 +181,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 5,
     quantity: 5,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 94,
@@ -182,11 +194,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 13,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 87,
@@ -197,25 +210,27 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 13,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 63,
     title: 'Sauce - Demi Glace',
     price: '$29.44',
-    old_price: null,
-    category: 'grain & nuts',
+    old_price: '$36.66',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 5,
     quantity: 11,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: true,
+    isFeatureProduct: false,
   },
   {
     id: 18,
@@ -228,8 +243,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 12,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 42,
@@ -243,8 +259,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 3,
     quantity: 9,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 100,
@@ -255,11 +272,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 5,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 34,
@@ -272,8 +290,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 4,
     quantity: 8,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 93,
@@ -284,11 +303,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 3,
     quantity: 20,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 26,
@@ -301,8 +321,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 3,
     quantity: 3,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 53,
@@ -316,8 +337,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 4,
     quantity: 10,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 98,
@@ -328,11 +350,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 3,
     quantity: 4,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 55,
@@ -346,8 +369,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 3,
     quantity: 2,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 23,
@@ -360,64 +384,69 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 3,
     quantity: 15,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 80,
     title: 'Stock - Chicken, White',
     price: '$14.30',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 3,
     quantity: 5,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 69,
     title: 'Radish - Black, Winter, Organic',
     price: '$5.40',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 4,
     quantity: 9,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 66,
     title: 'Curry Paste - Madras',
     price: '$25.85',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 3,
     quantity: 15,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 61,
     title: 'Bar - Sweet And Salty Chocolate',
     price: '$11.46',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 4,
     quantity: 3,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 32,
@@ -430,8 +459,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 5,
     quantity: 16,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 59,
@@ -445,8 +475,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 4,
     quantity: 6,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 82,
@@ -457,11 +488,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 19,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 99,
@@ -472,39 +504,42 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 4,
     quantity: 1,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 4,
     title: 'Melon - Cantaloupe',
     price: '$6.66',
-    old_price: null,
+    old_price: '$13.86',
     category: 'fruits',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 17,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: true,
+    isFeatureProduct: false,
   },
   {
     id: 7,
-    title: 'Country Roll',
+    title: 'Sweet Apples',
     price: '$20.24',
-    old_price: null,
+    old_price: '$27.46',
     category: 'fruits',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 7,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: true,
+    isFeatureProduct: false,
   },
   {
     id: 8,
@@ -517,8 +552,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 8,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 83,
@@ -529,11 +565,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 11,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 60,
@@ -547,8 +584,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 3,
     quantity: 9,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 52,
@@ -562,22 +600,24 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 4,
     quantity: 2,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 78,
     title: 'Wine - White, Riesling, Semi - Dry',
     price: '$15.32',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 3,
     quantity: 6,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 36,
@@ -590,22 +630,24 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 4,
     quantity: 20,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 75,
     title: 'Sauce - Plum',
     price: '$10.78',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 3,
     quantity: 16,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 46,
@@ -619,22 +661,24 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 4,
     quantity: 10,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 79,
     title: 'Flavouring Vanilla Artificial',
     price: '$24.28',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 5,
     quantity: 20,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 25,
@@ -647,8 +691,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 3,
     quantity: 16,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 15,
@@ -661,8 +706,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 20,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 90,
@@ -673,11 +719,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 8,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 31,
@@ -690,8 +737,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 3,
     quantity: 16,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 30,
@@ -704,8 +752,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 4,
     quantity: 19,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 38,
@@ -718,8 +767,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 5,
     quantity: 20,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 14,
@@ -732,8 +782,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 2,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 48,
@@ -747,36 +798,39 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 4,
     quantity: 8,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 62,
     title: 'Bread - White Mini Epi',
     price: '$24.15',
     old_price: '$29.15',
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 4,
     quantity: 11,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 76,
     title: 'Chocolate - Sugar Free Semi Choc',
     price: '$18.51',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 5,
     quantity: 18,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 10,
@@ -789,8 +843,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 5,
     quantity: 19,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 45,
@@ -804,8 +859,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 3,
     quantity: 2,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 19,
@@ -818,22 +874,24 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 7,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 71,
     title: 'Goat - Leg',
     price: '$18.96',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 5,
     quantity: 20,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 24,
@@ -846,8 +904,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 4,
     quantity: 7,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 51,
@@ -861,8 +920,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 5,
     quantity: 17,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 1,
@@ -875,8 +935,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 3,
     quantity: 7,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 2,
@@ -889,8 +950,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 5,
     quantity: 7,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 44,
@@ -904,8 +966,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 4,
     quantity: 5,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 3,
@@ -918,8 +981,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 3,
     quantity: 17,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 92,
@@ -930,11 +994,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 12,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 33,
@@ -947,22 +1012,24 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 5,
     quantity: 8,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 77,
     title: 'Wine - White, Pinot Grigio',
     price: '$19.94',
     old_price: '$24.94',
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 3,
     quantity: 14,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 56,
@@ -976,8 +1043,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 5,
     quantity: 2,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 11,
@@ -990,22 +1058,24 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 5,
     quantity: 15,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 73,
     title: 'Wine - Peller Estates Late',
     price: '$11.22',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 4,
     quantity: 8,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 91,
@@ -1016,11 +1086,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 3,
     quantity: 18,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 88,
@@ -1031,25 +1102,27 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 4,
     quantity: 2,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 72,
     title: 'Wine - Fontanafredda Barolo',
     price: '$20.68',
     old_price: '$25.68',
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 4,
     quantity: 10,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 39,
@@ -1062,8 +1135,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 4,
     quantity: 4,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 6,
@@ -1076,8 +1150,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 8,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 22,
@@ -1090,8 +1165,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 5,
     quantity: 12,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 57,
@@ -1105,8 +1181,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 4,
     quantity: 3,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 27,
@@ -1119,8 +1196,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 4,
     quantity: 2,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 97,
@@ -1131,11 +1209,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 3,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 9,
@@ -1148,8 +1227,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 5,
     quantity: 15,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 35,
@@ -1162,8 +1242,9 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 5,
     quantity: 7,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 13,
@@ -1176,22 +1257,24 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 3,
     quantity: 2,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 68,
     title: 'Cinnamon Rolls',
     price: '$14.87',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 5,
     quantity: 17,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 81,
@@ -1202,11 +1285,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 5,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 41,
@@ -1220,8 +1304,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 4,
     quantity: 14,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 17,
@@ -1234,8 +1319,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 5,
     quantity: 7,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 89,
@@ -1246,25 +1332,27 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 16,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 65,
     title: 'Salt - Kosher',
     price: '$18.72',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 4,
     quantity: 17,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 16,
@@ -1277,8 +1365,9 @@ const data = [
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
     raiting: 4,
     quantity: 14,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 40,
@@ -1291,22 +1380,24 @@ const data = [
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
     raiting: 3,
     quantity: 2,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 70,
     title: 'Dill - Primerba, Paste',
     price: '$27.56',
     old_price: '$32.56',
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 4,
     quantity: 15,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 37,
@@ -1317,10 +1408,11 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-aubergine-558x600.jpg',
-    raiting: 4,
+    raiting: 5,
     quantity: 9,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: true,
   },
   {
     id: 54,
@@ -1334,8 +1426,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 5,
     quantity: 16,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 58,
@@ -1349,8 +1442,9 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 5,
     quantity: 19,
-    isOnSale: true,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 84,
@@ -1361,11 +1455,12 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 3,
     quantity: 16,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 86,
@@ -1376,39 +1471,42 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url:
-      'https://st3.depositphotos.com/1177973/12883/i/600/depositphotos_128836304-stock-photo-watermelon-smoothie-on-white-background.jpg',
+      'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg',
     raiting: 5,
     quantity: 4,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
   {
     id: 67,
     title: 'Wine - Cousino Macul Antiguas',
     price: '$5.65',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
-    raiting: 3,
+    raiting: 5,
     quantity: 8,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: true,
   },
   {
     id: 64,
     title: 'Plate - Foam, Bread And Butter',
     price: '$28.68',
     old_price: null,
-    category: 'grain & nuts',
+    category: 'grainAndNuts',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://vkustorg.com/image/cache/Sukhofrukty/44301251-1000x1000.jpg',
     raiting: 5,
     quantity: 20,
-    isOnSale: false,
     isNew: false,
+    isUltraSale: false,
+    isFeatureProduct: true,
   },
   {
     id: 20,
@@ -1419,10 +1517,11 @@ const data = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     image_url: 'https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg',
-    raiting: 3,
+    raiting: 5,
     quantity: 7,
-    isOnSale: true,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: true,
   },
   {
     id: 50,
@@ -1436,19 +1535,34 @@ const data = [
       'https://thumbs.dreamstime.com/b/%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-raw-%D1%84%D0%B8%D0%BB%D0%B5-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%BE%D0%B9-%D0%B3%D1%80%D1%83%D0%B4%D0%BA%D0%B8-172873957.jpg',
     raiting: 5,
     quantity: 16,
-    isOnSale: false,
     isNew: true,
+    isUltraSale: false,
+    isFeatureProduct: false,
   },
 ];
-const newData = data.map(el => {
-  if (el.category === 'smoothies')
-    el.image_url =
-      'https://thumbs.dreamstime.com/b/%D0%BC%D0%B0%D1%81%D0%BE%D0%BD%D1%81%D0%BA%D0%B0%D1%8F-%D0%B1%D0%B0%D0%BD%D0%BA%D0%B0-%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D0%B7%D0%B5%D0%BB%D0%B5%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%BC%D1%83%D0%B7%D0%B8-%D1%81-%D1%81%D0%B2%D0%B5%D0%B6%D0%B8%D0%BC-%D1%88%D0%BF%D0%B8%D0%BD%D0%B0%D1%82%D0%BE%D0%BC-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%B4%D0%BD%D0%B5%D0%BC-160946801.jpg';
 
+const newData = data.map(el => {
+  el.isFeatureProduct = false;
   return el;
 });
 
 console.log(newData);
+
+// const newData = data.map(el => {
+//   el.isUltraSale = false;
+//   return el;
+// });
+
+// console.log(newData);
+
+// const newData = data.map(el => {
+//   if (el.category === 'smoothies')
+//     el.image_url =
+//       'https://st3.depositphotos.com/16122460/31657/i/450/depositphotos_316574936-stock-photo-tasty-fresh-milk-shake-in.jpg';
+//   return el;
+// });
+
+// console.log(newData);
 // const calculateQuantity = category => {
 //   return data.reduce((acc, el) => {
 //     if (el.category === category) acc += 1;

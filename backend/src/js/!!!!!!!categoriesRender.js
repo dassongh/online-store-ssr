@@ -109,5 +109,6 @@ function renderProducts(products) {
     carousel.insertAdjacentHTML('beforeend', markup);
   });
 
-  refs.container.innerHTML = carousel;
+  refs.container.innerHTML = '';
+  refs.container.appendChild(carousel);
 }

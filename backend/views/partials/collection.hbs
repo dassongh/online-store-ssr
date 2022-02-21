@@ -57,22 +57,22 @@
               <h2 class="collection__heading">Arriwal Organic</h2>
               <ul class="header__links collection__links">
                 <li class="header__link-item collection__item" >
-                  <a href="" class="header__link header__link--current collection__choice-link--current" data-category="all">All</a>
+                  <a href="/" class="header__link header__link--current collection__choice-link--current" data-category="all">All</a>
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link" data-category="meats">Meats</a>
+                  <a href="/:meats" class="header__link" data-category="meats">Meats</a>
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link" data-category="vegetables">Vegetables</a>
+                  <a href="/:vegetables" class="header__link" data-category="vegetables">Vegetables</a>
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link" data-category="grainAndNuts">Grain</a>
+                  <a href="/:grainAndNuts" class="header__link" data-category="grainAndNuts">Grain</a>
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link" data-category="fruits">Fruits</a>
+                  <a href="/:fruits" class="header__link" data-category="fruits">Fruits</a>
                 </li>
                 <li class="header__link-item collection__item">
-                  <a href="" class="header__link" data-category="all">Other</a>
+                  <a href="/" class="header__link" data-category="smoothies">Other</a>
                 </li>
               </ul>
             </div>
@@ -82,7 +82,7 @@
                 {{#each products}}
 
                 <div class="owl-card">
-                  <div class="thumb">
+                  <div class="thumb" data-id="{{ id }}">
                     <img src="{{ image_url }}" alt="{{ category }}">
 
                     {{#if (isSaleAndNew old_price isNew)}}
@@ -169,11 +169,11 @@
                   <p class="card-item__text">{{ title }}</p>
                   <p class="card-item__price">{{ price }}
 
-                    {{#if old_price}}
-                    <span class="card-item__price card-item__old-price">{{ old_price }}</span>
-                    {{/if}}
-                    
-                    </p>
+                  {{#if old_price}}
+                  <span class="card-item__price card-item__old-price">{{ old_price }}</span>
+                  {{/if}}
+                  
+                  </p>
                 </div>
 
                 {{/each}}
