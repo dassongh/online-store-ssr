@@ -17,23 +17,23 @@
               <li class="feature-item">
                 <div class="thumb feature__thumb" data-id="{{ id }}">
                   
-                  <img src="{{ image_url }}" alt="{{ category }}">
+                  <img src="{{ image_url }}" alt="{{ category }}" data-image="{{ id }}">
 
-                  {{#if (isSaleAndNew old_price isNew)}}
-                  <div class="thumb__discount thumb__discount--both"><span class="thumb__discount-number">-20%</span></div>
-                  <div class="thumb__discount thumb__discount--both-new"><span class="thumb__discount-number">new</span></div>
+                    {{#if (isSaleAndNew old_price isNew)}}
+                    <div class="thumb__discount thumb__discount--both"><span class="thumb__discount-number">-35%</span></div>
+                    <div class="thumb__discount thumb__discount--both-new"><span class="thumb__discount-number">new</span></div>
 
-                  {{else}}
+                    {{else}}
 
-                  {{#if old_price}}
-                  <div class="thumb__discount"><span class="thumb__discount-number">-20%</span></div>
-                  {{/if}}
-                  
-                  {{#if isNew}}
-                  <div class="thumb__discount thumb__discount--sale"><span class="thumb__discount-number">new</span></div>
-                  {{/if}}
+                    {{#if old_price}}
+                    <div class="thumb__discount"><span class="thumb__discount-number">-35%</span></div>
+                    {{/if}}
+                    
+                    {{#if isNew}}
+                    <div class="thumb__discount thumb__discount--sale"><span class="thumb__discount-number">new</span></div>
+                    {{/if}}
 
-                  {{/if}}
+                    {{/if}}
 
                   <button class="thumb__like-btn">
                     <svg fill="none" viewBox="0 0 15 15" width="15px" height="14px">
@@ -57,7 +57,7 @@
                       </button>
                     </li>
                     <li class="thumb__button-item">
-                      <button class="thumb__button-add-to-card">
+                      <button class="thumb__button-add-to-card" data-add="{{ id }}">
                         <svg fill="none" viewBox="0 0 13 15" width="12.5px" height="15px">
                           <path
                             d="m12.701 14.374-0.9128-10.165c-0.0249-0.27759-0.2575-0.49022-0.5362-0.49022h-1.8823v-0.84894c0-1.5822-1.2871-2.8694-2.8692-2.8694-1.582 0-2.869 1.2872-2.869 2.8694v0.84894h-1.8836c-0.27868 0-0.51133 0.21263-0.53624 0.49022l-0.91635 10.205c-0.013496 0.1506 0.036897 0.2999 0.1389 0.4114 0.10201 0.1116 0.24622 0.1751 0.39733 0.1751h11.337 0.0014c0.2974 0 0.5384-0.241 0.5384-0.5384 0-0.0299-0.0025-0.0594-0.0072-0.088zm-7.9927-11.504c0-0.98842 0.804-1.7926 1.7923-1.7926 0.98834 0 1.7924 0.80414 1.7924 1.7926v0.84894h-3.5847v-0.84894zm-3.2878 11.054 0.81965-9.1281h1.3914v0.96279c0 0.29733 0.24099 0.53839 0.5384 0.53839s0.53839-0.24106 0.53839-0.53839v-0.96279h3.5847v0.96279c0 0.29733 0.24098 0.53839 0.53839 0.53839s0.53839-0.24106 0.53839-0.53839v-0.96279h1.39l0.8197 9.1281h-10.159z"
@@ -69,13 +69,13 @@
                     </li>
                     <li class="thumb__button-item">
                       <a href="product/:{{ id }}" class="thumb__button">
-                          <svg fill="none" viewBox="0 0 15 15" width="15px" height="15px">
-                            <path
-                              d="m14.502 13.655-3.2256-3.2256c0.9111-1.1045 1.4062-2.4785 1.4062-3.9258 0-1.6524-0.6416-3.2022-1.8105-4.3711-1.166-1.1689-2.7188-1.8105-4.3682-1.8105-1.6494 0-3.2022 0.6416-4.3711 1.8105-1.1689 1.166-1.8105 2.7188-1.8105 4.3711 0 1.6494 0.6416 3.2021 1.8105 4.3711 1.166 1.166 2.7188 1.8105 4.3711 1.8105 1.4502 0 2.8242-0.4951 3.9258-1.4062l3.2256 3.2227c0.2343 0.2343 0.6123 0.2343 0.8467 0 0.2343-0.2344 0.2343-0.6124 0-0.8467zm-11.523-3.6299c-0.94336-0.94044-1.4619-2.1914-1.4619-3.5215 0-1.3301 0.51855-2.584 1.459-3.5244s2.1914-1.459 3.5244-1.459c1.3301 0 2.584 0.51855 3.5244 1.459 0.9404 0.94043 1.459 2.1914 1.459 3.5244 0 1.3301-0.5186 2.584-1.459 3.5244-0.94044 0.9405-2.1944 1.459-3.5244 1.459-1.3301 0-2.5811-0.5185-3.5215-1.4619z"
-                              fill="#000"
-                            />
-                          </svg>
-                        </a>
+                        <svg fill="none" viewBox="0 0 15 15" width="15px" height="15px">
+                          <path
+                            d="m14.502 13.655-3.2256-3.2256c0.9111-1.1045 1.4062-2.4785 1.4062-3.9258 0-1.6524-0.6416-3.2022-1.8105-4.3711-1.166-1.1689-2.7188-1.8105-4.3682-1.8105-1.6494 0-3.2022 0.6416-4.3711 1.8105-1.1689 1.166-1.8105 2.7188-1.8105 4.3711 0 1.6494 0.6416 3.2021 1.8105 4.3711 1.166 1.166 2.7188 1.8105 4.3711 1.8105 1.4502 0 2.8242-0.4951 3.9258-1.4062l3.2256 3.2227c0.2343 0.2343 0.6123 0.2343 0.8467 0 0.2343-0.2344 0.2343-0.6124 0-0.8467zm-11.523-3.6299c-0.94336-0.94044-1.4619-2.1914-1.4619-3.5215 0-1.3301 0.51855-2.584 1.459-3.5244s2.1914-1.459 3.5244-1.459c1.3301 0 2.584 0.51855 3.5244 1.459 0.9404 0.94043 1.459 2.1914 1.459 3.5244 0 1.3301-0.5186 2.584-1.459 3.5244-0.94044 0.9405-2.1944 1.459-3.5244 1.459-1.3301 0-2.5811-0.5185-3.5215-1.4619z"
+                            fill="#000"
+                          />
+                        </svg>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -99,9 +99,9 @@
                   <div class="clip-star"></div>
                   {{/if}}
 
-                </div>               
-                <p class="card-item__text">{{ title }}</p>
-                <p class="card-item__price">{{ price }}
+                </div>
+                <p class="card-item__text" data-title="{{ id }}">{{ title }} </p>
+                <p class="card-item__price" data-price="{{ id }}">{{ price }} 
 
                 {{#if old_price}}
                 <span class="card-item__price card-item__old-price">{{ old_price }}</span>

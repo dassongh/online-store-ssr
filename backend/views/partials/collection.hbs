@@ -7,7 +7,7 @@
                   <img src="ccd42e3c4555cad01ece.jpg" alt="vegetables" />
                 </div>
                 <h3 class="collection__name">Vegetables</h3>
-                <p class="collection__quantity">{{ categories.vegetables }} items</p>
+                <p class="collection__quantity">{{ categoriesNumber.vegetables }} items</p>
               </a>
             </li>
 
@@ -17,7 +17,7 @@
                    <img src="5694ab5a56d8bdf72b24.jpg" alt="fruits" />
                 </div>
                 <h3 class="collection__name">Fresh Fruits</h3>
-                <p class="collection__quantity">{{ categories.fruits }} items</p>
+                <p class="collection__quantity">{{ categoriesNumber.fruits }} items</p>
               </a>
             </li>
 
@@ -27,7 +27,7 @@
                   <img src="6eae68717da3ba2e2648.jpg" alt="grainAndNuts" />
                 </div>
                 <h3 class="collection__name">Grain & Nuts</h3>
-                <p class="collection__quantity">{{ categories.grainAndNuts }} items</p>
+                <p class="collection__quantity">{{ categoriesNumber.grainAndNuts }} items</p>
               </a>
             </li>
 
@@ -37,7 +37,7 @@
                   <img src="acb5b709ec83eb940499.jpg" alt="meats" />
                 </div>
                 <h3 class="collection__name">Fresh Meats</h3>
-                <p class="collection__quantity">{{ categories.meats }} items</p>
+                <p class="collection__quantity">{{ categoriesNumber.meats }} items</p>
               </a>
             </li>
 
@@ -47,7 +47,7 @@
                   <img src="32c37b8c5d4b8d0324b1.jpg" alt="smoothie" />
                 </div>
                 <h3 class="collection__name">Fresh Smoothie</h3>
-                <p class="collection__quantity">{{ categories.smoothies }} items</p>
+                <p class="collection__quantity">{{ categoriesNumber.smoothies }} items</p>
               </a>
             </li>
           </ul>
@@ -83,7 +83,7 @@
 
                 <div class="owl-card">
                   <div class="thumb" data-id="{{ id }}">
-                    <img src="{{ image_url }}" alt="{{ category }}">
+                    <img src="{{ image_url }}" alt="{{ category }}" data-image="{{ id }}">
 
                     {{#if (isSaleAndNew old_price isNew)}}
                     <div class="thumb__discount thumb__discount--both"><span class="thumb__discount-number">-20%</span></div>
@@ -123,7 +123,7 @@
                         </button>
                       </li>
                       <li class="thumb__button-item">
-                        <button class="thumb__button-add-to-card">
+                        <button class="thumb__button-add-to-card" data-add="{{ id }}">
                           <svg fill="none" viewBox="0 0 13 15" width="12.5px" height="15px">
                             <path
                               d="m12.701 14.374-0.9128-10.165c-0.0249-0.27759-0.2575-0.49022-0.5362-0.49022h-1.8823v-0.84894c0-1.5822-1.2871-2.8694-2.8692-2.8694-1.582 0-2.869 1.2872-2.869 2.8694v0.84894h-1.8836c-0.27868 0-0.51133 0.21263-0.53624 0.49022l-0.91635 10.205c-0.013496 0.1506 0.036897 0.2999 0.1389 0.4114 0.10201 0.1116 0.24622 0.1751 0.39733 0.1751h11.337 0.0014c0.2974 0 0.5384-0.241 0.5384-0.5384 0-0.0299-0.0025-0.0594-0.0072-0.088zm-7.9927-11.504c0-0.98842 0.804-1.7926 1.7923-1.7926 0.98834 0 1.7924 0.80414 1.7924 1.7926v0.84894h-3.5847v-0.84894zm-3.2878 11.054 0.81965-9.1281h1.3914v0.96279c0 0.29733 0.24099 0.53839 0.5384 0.53839s0.53839-0.24106 0.53839-0.53839v-0.96279h3.5847v0.96279c0 0.29733 0.24098 0.53839 0.53839 0.53839s0.53839-0.24106 0.53839-0.53839v-0.96279h1.39l0.8197 9.1281h-10.159z"
@@ -166,8 +166,8 @@
                     {{/if}}
 
                   </div>
-                  <p class="card-item__text">{{ title }}</p>
-                  <p class="card-item__price">{{ price }}
+                  <p class="card-item__text" data-title="{{ id }}">{{ title }}</p>
+                  <p class="card-item__price" data-price="{{ id }}">{{ price }}
 
                   {{#if old_price}}
                   <span class="card-item__price card-item__old-price">{{ old_price }}</span>

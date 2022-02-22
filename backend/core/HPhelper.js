@@ -35,6 +35,7 @@ const ultraSaleProducts = returnUltraSale();
 const featureProducts = returnFeatureProducts();
 
 module.exports = {
+  data,
   categoriesNumber,
   categories,
   ultraSaleProducts,
