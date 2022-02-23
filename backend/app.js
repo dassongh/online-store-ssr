@@ -9,7 +9,7 @@ hbs.registerHelper('isFourStar', value => value === 4);
 hbs.registerHelper('isThreeStar', value => value === 3);
 hbs.registerHelper('isSaleAndNew', (oldPrice, isNew) => oldPrice && isNew);
 
-const hpRouter = require('./services/HP');
+const hpRouter = require('./services/products');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
