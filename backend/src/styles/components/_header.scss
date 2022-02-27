@@ -6,6 +6,10 @@
 /* header-top */
 .header__top-bg {
   background-color: #88b13e;
+
+  &--secondary {
+    background-color: #223324;
+  }
 }
 
 .header__top {
@@ -150,6 +154,10 @@
   position: relative;
   color: #88b13e;
 
+  & svg {
+    fill: #88b13e;
+  }
+
   &::after {
     position: absolute;
     top: 52px;
@@ -198,6 +206,10 @@
   font-family: 'LobsterTwo';
   font-weight: 400;
   font-size: 42px;
+
+  &--secondary {
+    color: #60a00c;
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     margin-right: 75px;
