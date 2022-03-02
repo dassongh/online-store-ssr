@@ -37,6 +37,14 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
+      filename: 'index.html',
+      template: './index.html',
+      minify: {
+        collapseWhitespace: !isDev,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'PLP.html',
       template: './PLP.html',
       minify: {
         collapseWhitespace: !isDev,

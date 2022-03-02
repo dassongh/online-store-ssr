@@ -8,6 +8,14 @@
     background-color: white;
     box-shadow: 0px 5px 25px rgba(138, 159, 168, 0.2);
   }
+
+  &:hover .thumb__buttons-list {
+    opacity: 1;
+  }
+
+  &:hover .thumb__like-btn {
+    opacity: 1;
+  }
 }
 
 .thumb {
@@ -86,7 +94,8 @@
   align-items: center;
   background-color: white;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
 
   &:hover {
     background-color: #fcbbcf;
@@ -113,6 +122,9 @@
   bottom: -10px;
   left: 50%;
   transform: translate(-50%);
+  opacity: 0;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .thumb__button {

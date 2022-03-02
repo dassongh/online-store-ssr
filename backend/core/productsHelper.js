@@ -48,10 +48,31 @@ const returnFeatureProducts = async () => {
   });
 };
 
+const sortBy = (products, method) => {
+  switch (method) {
+    case 'default':
+      return products;
+    case 'raiting':
+      return products.sort((a, b) => b.raiting - a.raiting);
+    case 'price':
+      return products.sort((a, b) => a.price.slice(1) - b.price.slice(1));
+    case 'name':
+      return products.sort((a, b) => {
+        const titleA = a.title.toLowerCase();
+        const titleB = b.title.toLowerCase();
+
+        if (titleA < titleB) return -1;
+        if (titleA > titleB) return 1;
+        return 0;
+      });
+  }
+};
+
 module.exports = {
   getAllProducts,
   calculateQuantity,
   returnCategory,
   returnUltraSale,
   returnFeatureProducts,
+  sortBy,
 };

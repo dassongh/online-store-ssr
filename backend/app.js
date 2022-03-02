@@ -15,6 +15,7 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static('dist'));
+app.use('/products/', express.static('dist'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

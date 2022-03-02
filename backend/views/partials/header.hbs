@@ -1,5 +1,11 @@
 <header>
+
+      {{#if shopPage}}
+      <div class="header__top-bg header__top-bg--secondary header__container-mobile not-visible" data-menu>
+      {{else}}
       <div class="header__top-bg header__container-mobile not-visible" data-menu>
+      {{/if}}  
+
         <div class="container">
           <div class="header__top">
             <ul class="header__contacts">
@@ -78,10 +84,22 @@
           </button>
           <ul class="header__links">
             <li class="header__link-item">
-              <a class="header__link header__link--current" href="./">Home</a>
+
+              {{#if homePage}}
+              <a class="header__link header__link--current" href="/">Home</a>
+              {{else}}
+              <a class="header__link" href="/">Home</a>
+              {{/if}}
+
             </li>
             <li class="header__link-item">
+
+              {{#if shopPage}}
+              <a class="header__link header__link-flex header__link--current" href="" data-link>
+              {{else}}  
               <a class="header__link header__link-flex" href="" data-link>
+              {{/if}}  
+
                 Shop
                 <svg enable-background="new 0 0 330 330" version="1.1" viewBox="0 0 330 330" width="12px" height="12px">
                   <path
@@ -101,7 +119,11 @@
             </li>
           </ul>
 
+          {{#if shopPage }}
+          <h2 class="logo"><span class="logo--secondary">Orga</span>Fresh</h2>
+          {{else}}
           <h2 class="logo">OrgaFresh</h2>
+          {{/if}}
 
           <ul class="header__icons">
             <li class="header__icons-item">
@@ -139,14 +161,14 @@
             <p class="drop-down__heading">Categories</p>
             <li class="drop-down__sub-list">
               <ul class="drop-down__sub-list__list drop-down__sub-list__list--first">
-                <li class="drop-down__item"><a class="header__link drop-down__link" href="">Fresh fruits</a></li>
-                <li class="drop-down__item"><a class="header__link drop-down__link" href="">Fresh Vegetables</a></li>
-                <li class="drop-down__item"><a class="header__link drop-down__link" href="">Fresh Meats</a></li>
+                <li class="drop-down__item"><a class="header__link drop-down__link" href="/products/?category=fruits">Fresh fruits</a></li>
+                <li class="drop-down__item"><a class="header__link drop-down__link" href="/products/?category=vegetables">Fresh Vegetables</a></li>
+                <li class="drop-down__item"><a class="header__link drop-down__link" href="/products/?category=meats">Fresh Meats</a></li>
               </ul>
               <ul class="drop-down__sub-list__list">
-                <li class="drop-down__item"><a class="header__link drop-down__link" href="">Grain & nuts</a></li>
-                <li class="drop-down__item"><a class="header__link drop-down__link" href="">Smoothies</a></li>
-                <li class="drop-down__item"><a class="header__link drop-down__link" href="">Top sales</a></li>
+                <li class="drop-down__item"><a class="header__link drop-down__link" href="/products/?category=grainAndNuts">Grain & nuts</a></li>
+                <li class="drop-down__item"><a class="header__link drop-down__link" href="/products/?category=smoothies">Smoothies</a></li>
+                <li class="drop-down__item"><a class="header__link drop-down__link" href="/products/?category=all">All products</a></li>
               </ul>
             </li>
           </ul>

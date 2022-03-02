@@ -96,6 +96,14 @@
     background-color: white;
     box-shadow: 0px 5px 25px rgba(138, 159, 168, 0.2);
   }
+
+  &:hover .thumb__buttons-list {
+    opacity: 1;
+  }
+
+  &:hover .thumb__like-btn {
+    opacity: 1;
+  }
 }
 
 .product-list__pagination {
