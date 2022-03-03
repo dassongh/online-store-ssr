@@ -55,6 +55,13 @@ module.exports = {
         collapseWhitespace: !isDev,
       },
     }),
+    new HTMLWebpackPlugin({
+      filename: 'PDP.html',
+      template: './PDP.html',
+      minify: {
+        collapseWhitespace: !isDev,
+      },
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [

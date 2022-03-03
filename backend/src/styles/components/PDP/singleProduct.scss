@@ -1,0 +1,129 @@
+.product {
+  padding: 80px 0;
+}
+
+.product__container {
+  display: flex;
+}
+
+.product__image {
+  width: 670px;
+  height: 670px;
+}
+
+.product__info-top {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ececec;
+}
+
+.product__heading {
+  font-weight: 500;
+  font-size: 42px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.product__price {
+  font-weight: 500;
+  font-size: 30px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.product__info-main {
+  margin-top: 36px;
+}
+
+.product__info-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.67;
+  color: #333333;
+  margin-bottom: 36px;
+
+  &--last {
+    margin-bottom: 0;
+  }
+}
+
+.product__info-action {
+  display: flex;
+  align-items: center;
+}
+
+.product__info-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 130px;
+  height: 46px;
+  border: 1px solid #ececec;
+  margin: 0px 20px 0 30px;
+}
+
+.product__info-quantityBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 14px 14px 8px;
+}
+
+.product__info-quantityText {
+  font-weight: 600;
+  font-size: 15px;
+  /* identical to box height, or 167% */
+  color: #333333;
+}
+
+.product__info-addBtn {
+  height: 46px;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  font-size: 15px;
+  color: white;
+  background-color: #111111;
+  padding: 0 30px 0 30px;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #60a00c;
+  }
+}
+
+.product__info-secBtn {
+  height: 46px;
+  width: 46px;
+  border: 1px solid #ececec;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 20px 0 20px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  & path {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover path {
+    fill: white;
+  }
+
+  &:hover {
+    background-color: #fcbbcf;
+    border: none;
+  }
+
+  &--last {
+    margin: 0;
+  }
+
+  &--last:hover {
+    background-color: #60a00c;
+    border: none;
+  }
+}
