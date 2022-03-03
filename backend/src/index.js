@@ -6,8 +6,8 @@ import './js/shopCart';
 import './js/timer';
 import './js/countdawn';
 import './js/addingToCart';
-import './js/paginationPLP';
-import './js/selectSortPLP';
+import './js/PLP/paginationPLP';
+import './js/PLP/selectSortPLP';
 
 import './styles/main.scss';
 import './styles/owlCarousel/owl.carousel.min.css';

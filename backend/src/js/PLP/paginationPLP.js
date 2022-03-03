@@ -1,38 +1,42 @@
-const refs = {
-  list: document.querySelector('.product-list__list'),
-  pages: document.querySelectorAll('[data-page]'),
-  pageOne: document.querySelector('[data-page]'),
-};
+(function () {
+  const refs = {
+    list: document.querySelector('.product-list__list'),
+    pages: document.querySelectorAll('[data-page]'),
+    pageOne: document.querySelector('[data-page]'),
+  };
 
-const BASE_URL = 'http://localhost:3000';
+  if (!refs.pageOne) return;
 
-refs.pageOne.classList.add('pagination--active');
+  const BASE_URL = 'http://localhost:3000';
 
-refs.pages.forEach(el => {
-  el.addEventListener('click', () => {
-    refs.pages.forEach(el => el.classList.remove('pagination--active'));
-    const page = el.dataset.page;
-    el.classList.add('pagination--active');
+  refs.pageOne.classList.add('pagination--active');
 
-    const params = new Proxy(new URLSearchParams(window.location.search), {
-      get: (searchParams, prop) => searchParams.get(prop),
-    });
-    const sort = params._sort_;
-    const category = params.category;
+  refs.pages.forEach(el => {
+    el.addEventListener('click', () => {
+      refs.pages.forEach(el => el.classList.remove('pagination--active'));
+      const page = el.dataset.page;
+      el.classList.add('pagination--active');
 
-    fetch(`${BASE_URL}/products/?category=${category}&page=${page}&_sort_=${sort !== 'default' ? sort : 'default'}`)
-      .then(res => res.json())
-      .then(res => {
-        const params = new URLSearchParams(window.location.search);
-        params.set('page', page);
-        window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
-
-        const markup = res.map(el => renderProduct(el)).join('');
-
-        refs.list.innerHTML = markup;
+      const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
       });
+      const sort = params._sort_;
+      const category = params.category;
+
+      fetch(`${BASE_URL}/products/?category=${category}&page=${page}&_sort_=${sort !== 'default' ? sort : 'default'}`)
+        .then(res => res.json())
+        .then(res => {
+          const params = new URLSearchParams(window.location.search);
+          params.set('page', page);
+          window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+
+          const markup = res.map(el => renderProduct(el)).join('');
+
+          refs.list.innerHTML = markup;
+        });
+    });
   });
-});
+})();
 
 export function renderProduct(product) {
   const { image_url, category, old_price, isNew, id, raiting, title, price } = product;

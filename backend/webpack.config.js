@@ -8,17 +8,17 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const optimization = () => {
-  const config = {
-    splitChunks: {
-      chunks: 'all',
-    },
-  };
+// const optimization = () => {
+//   const config = {
+//     splitChunks: {
+//       chunks: 'all',
+//     },
+//   };
 
-  if (!isDev) config.minimizer = [new OptimizeCSSAssetsWebpackPlugin(), new TerserWebpackPlugin()];
+//   if (!isDev) config.minimizer = [new OptimizeCSSAssetsWebpackPlugin(), new TerserWebpackPlugin()];
 
-  return config;
-};
+//   return config;
+// };
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -30,7 +30,12 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
-  optimization: optimization(),
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+    minimizer: [new OptimizeCSSAssetsWebpackPlugin(), new TerserWebpackPlugin()],
+  },
   devServer: {
     port: 4200,
     hot: isDev,
