@@ -8,6 +8,8 @@ import './js/countdawn';
 import './js/addingToCart';
 import './js/PLP/paginationPLP';
 import './js/PLP/selectSortPLP';
+import './js/PDP/descButtonsPDP';
+import './js/PDP/addingToCartPDP';
 
 import './styles/main.scss';
 import './styles/owlCarousel/owl.carousel.min.css';

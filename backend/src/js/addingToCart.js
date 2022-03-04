@@ -10,11 +10,17 @@ const refs = {
   productsListPLP: document.querySelector('.product-list__list'),
 };
 
-if (refs.productsList) addItemToCart(refs.productsList, refs.weekDealsList, refs.featureList);
-
-if (refs.productsListPLP) addItemToCart(refs.productsListPLP);
+if (refs.productsList && refs.weekDealsList && refs.featureList) {
+  addItemToCart(refs.productsList, refs.weekDealsList, refs.featureList);
+} else if (refs.productsListPLP) {
+  addItemToCart(refs.productsListPLP);
+} else if (refs.productsList) {
+  addItemToCart(refs.productsList);
+}
 
 export function addItemToCart(...productLists) {
+  refs.container.innerHTML = '';
+
   let products = null;
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 
