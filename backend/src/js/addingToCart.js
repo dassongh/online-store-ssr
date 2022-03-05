@@ -3,7 +3,7 @@ const refs = {
   price: document.querySelectorAll('[data-price]'),
   image: document.querySelectorAll('[data-image]'),
   container: document.querySelector('.shop-cart__list'),
-  totalPrice: document.querySelector('.shop-cart__quantity'),
+  totalPrice: document.querySelector('[data-total]'),
   productsList: document.querySelector('.collection__choice-main'),
   weekDealsList: document.querySelector('.weekDeals__main-list'),
   featureList: document.querySelector('.feature-list'),
@@ -127,10 +127,12 @@ export function addItemToCart(...productLists) {
       refs.totalPrice.innerText = countTotal();
     }, 0);
   }
+}
 
-  function countTotal() {
-    const products = JSON.parse(localStorage.getItem('productCart'));
+export function countTotal() {
+  const products = JSON.parse(localStorage.getItem('productCart'));
 
+  if (products) {
     const totalPrice = products.reduce((acc, el) => {
       const total = Number(el.price.slice(1)) * Number(el.quantity);
       acc += total;
