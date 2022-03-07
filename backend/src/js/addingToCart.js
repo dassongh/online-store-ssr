@@ -139,6 +139,6 @@ export function countTotal() {
       return acc;
     }, 0);
 
-    return `$${totalPrice}`;
+    return `$${totalPrice.toFixed(2)}`;
   }
 }

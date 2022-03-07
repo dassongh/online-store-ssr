@@ -131,6 +131,10 @@
 }
 
 .shop-cart__footerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   height: 46px;
   width: 100%;
   margin-bottom: 20px;

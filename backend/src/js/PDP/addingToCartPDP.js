@@ -28,7 +28,7 @@ if (refs.plusButton) {
 
     if (productCart.length > 0) {
       const updatedCart = productCart.map(el => {
-        if (el.id === refs.plusButton.dataset.plus) {
+        if (el.id == refs.plusButton.dataset.plus) {
           el.quantity += 1;
         }
         return el;
@@ -48,7 +48,7 @@ if (refs.plusButton) {
 
     if (productCart.length > 0) {
       const updatedCart = productCart.map(el => {
-        if (el.id === refs.plusButton.dataset.plus && el.quantity > 0) {
+        if (el.id == refs.plusButton.dataset.plus && el.quantity > 0) {
           el.quantity -= 1;
         }
         return el;
@@ -68,15 +68,9 @@ function renderQuantity() {
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 
   if (productCart.length > 0) {
-    const quantity = productCart.map(el => {
-      if (el.id === refs.plusButton.dataset.plus) {
-        return el.quantity;
-      }
-    });
+    const quantity = productCart.find(el => el.id === refs.plusButton.dataset.plus)?.quantity;
 
-    refs.quantity.innerText = quantity[0];
-  } else {
-    refs.quantity.innerText = '0';
+    quantity ? (refs.quantity.innerText = quantity) : (refs.quantity.innerText = '0');
   }
 }
 
@@ -84,11 +78,7 @@ function renderCartQuantity() {
   const quantityRef = document.querySelector(`[data-quantity="${refs.plusButton.dataset.plus}"]`);
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 
-  const quantity = productCart.map(el => {
-    if (el.id === refs.plusButton.dataset.plus) {
-      return el.quantity;
-    }
-  });
+  const quantity = productCart.find(el => el.id === refs.plusButton.dataset.plus)?.quantity;
 
-  quantityRef.innerText = quantity[0];
+  quantityRef.innerText = quantity;
 }

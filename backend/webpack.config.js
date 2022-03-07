@@ -62,6 +62,13 @@ module.exports = {
         collapseWhitespace: !isDev,
       },
     }),
+    new HTMLWebpackPlugin({
+      filename: 'Cart.html',
+      template: './Cart.html',
+      minify: {
+        collapseWhitespace: !isDev,
+      },
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
