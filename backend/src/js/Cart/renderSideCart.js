@@ -4,10 +4,10 @@ import { countTotal } from '../addingToCart';
   const refs = {
     container: document.querySelector('.shop-cart__list'),
     totalPrice: document.querySelector('[data-total]'),
-    table: document.querySelector('.table'),
+    tableContainer: document.querySelector('.table__container'),
   };
 
-  if (!refs.table) return;
+  if (!refs.tableContainer) return;
 
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 

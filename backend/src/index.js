@@ -11,6 +11,7 @@ import './js/PLP/selectSortPLP';
 import './js/PDP/descButtonsPDP';
 import './js/PDP/addingToCartPDP';
 import './js/Cart/renderSideCart';
+import './js/Cart/renderMainCart';
 
 import './styles/main.scss';
 import './styles/owlCarousel/owl.carousel.min.css';
