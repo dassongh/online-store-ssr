@@ -1,5 +1,6 @@
 (function () {
   const tableContainerRef = document.querySelector('.table__container');
+  const totalPriceRef = document.querySelector('.table__total-price');
 
   if (!tableContainerRef) return;
 
@@ -8,6 +9,8 @@
   if (productCart.length > 0) {
     tableContainerRef.prepend(renderTable(productCart));
     addClickHanlders();
+    const itemsTotalPrice = tableContainerRef.querySelectorAll('[data-totalprice]');
+    countTotal(itemsTotalPrice);
   } else {
     renderParagraph();
   }
@@ -131,7 +134,7 @@
 
             refs.totalPrice.forEach(item => {
               if (item.dataset.totalprice === el.id) {
-                item.innerText = `$${Number(el.price.slice(1)) * Number(el.quantity).toFixed(2)}`;
+                item.innerText = `$${(Number(el.price.slice(1)) * Number(el.quantity)).toFixed(2)}`;
               }
             });
 
@@ -143,6 +146,8 @@
           }
           return el;
         });
+
+        countTotal(refs.totalPrice);
 
         localStorage.setItem('productCart', JSON.stringify(updatedCart));
       });
@@ -156,7 +161,7 @@
 
             refs.totalPrice.forEach(item => {
               if (item.dataset.totalprice === el.id) {
-                item.innerText = `$${Number(el.price.slice(1)) * Number(el.quantity).toFixed(2)}`;
+                item.innerText = `$${(Number(el.price.slice(1)) * Number(el.quantity)).toFixed(2)}`;
               }
             });
 
@@ -168,6 +173,8 @@
           }
           return el;
         });
+
+        countTotal(refs.totalPrice);
 
         localStorage.setItem('productCart', JSON.stringify(updatedCart));
       });
@@ -182,7 +189,18 @@
         });
 
         localStorage.setItem('productCart', JSON.stringify(updatedCart));
+
+        const totalsPrice = tableContainerRef.querySelectorAll('[data-totalprice]');
+        countTotal(totalsPrice);
       });
     });
+  }
+
+  function countTotal(totals) {
+    const totalPrice = [...totals].reduce((acc, el) => {
+      return (acc += Number(el.innerText.slice(1)));
+    }, 0);
+    console.log('counted');
+    totalPriceRef.innerText = `$${totalPrice.toFixed(2)}`;
   }
 })();
