@@ -1,14 +1,19 @@
 import { countTotal } from '../addingToCart';
 
-(function () {
-  const refs = {
-    container: document.querySelector('.shop-cart__list'),
-    totalPrice: document.querySelector('[data-total]'),
-    tableContainer: document.querySelector('.table__container'),
-  };
+const refs = {
+  container: document.querySelector('.shop-cart__list'),
+  totalPrice: document.querySelector('[data-total]'),
+  tableContainer: document.querySelector('.table__container'),
+  chekoutProducts: document.querySelector('.chekout__totals'),
+};
 
-  if (!refs.tableContainer) return;
+if (refs.tableContainer) {
+  renderSideCart();
+} else if (refs.chekoutProducts) {
+  renderSideCart();
+}
 
+function renderSideCart() {
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 
   if (productCart) {
@@ -68,4 +73,4 @@ import { countTotal } from '../addingToCart';
       refs.totalPrice.innerText = countTotal();
     }, 0);
   }
-})();
+}

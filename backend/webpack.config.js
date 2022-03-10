@@ -69,6 +69,13 @@ module.exports = {
         collapseWhitespace: !isDev,
       },
     }),
+    new HTMLWebpackPlugin({
+      filename: 'Chekout.html',
+      template: './Chekout.html',
+      minify: {
+        collapseWhitespace: !isDev,
+      },
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [

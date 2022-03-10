@@ -200,7 +200,7 @@
     const totalPrice = [...totals].reduce((acc, el) => {
       return (acc += Number(el.innerText.slice(1)));
     }, 0);
-    console.log('counted');
+
     totalPriceRef.innerText = `$${totalPrice.toFixed(2)}`;
   }
 })();
