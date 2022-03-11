@@ -33,7 +33,7 @@
                 <span class="chekout__quantity">${quantity}</span><span class="chekout__quantity">x</span>
                 <p class="chekout__name">${title}</p>
               </div>
-              <span class="chekout__price">$${Number(quantity) * Number(price.slice(1)).toFixed(2)}</span>
+              <span class="chekout__price">$${(Number(quantity) * Number(price.slice(1))).toFixed(2)}</span>
             </div>
           </li>
       `;
@@ -55,9 +55,9 @@
       </div>
       <div class="chekout__total">
         <span>Total</span>
-        <div><span class="chekout__currency">USD</span><span class="chekout__total-price">$${
+        <div><span class="chekout__currency">USD</span><span class="chekout__total-price">$${(
           Number(totalPrice) + Number(taxes)
-        }0</span></div>
+        ).toFixed(2)}</span></div>
       </div>
     `;
 
