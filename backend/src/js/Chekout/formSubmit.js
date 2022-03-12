@@ -13,34 +13,33 @@
 
     if (!productCart.length > 0) return;
 
-    const products = productCart.map(el => {
-      return {
-        id: Number(el.id),
-        title: el.title,
-        price: el.price,
-        quantity: Number(el.quantity),
-      };
-    });
+    const products = productCart.map(({ id, quantity }) => ({
+      productId: Number(id),
+      quantity: Number(quantity),
+    }));
 
-    const orderData = {
-      contact: formRef.elements.contact.value,
-      newsletter: formRef.elements.newsletter.checked,
-      firstName: formRef.elements.FirstName.value,
-      lastName: formRef.elements.LastName.value,
-      location: {
+    const date = new Date().toLocaleString();
+
+    const formData = {
+      orderData: {
+        contact: formRef.elements.contact.value,
+        newsletter: formRef.elements.newsletter.checked,
+        firstName: formRef.elements.FirstName.value,
+        lastName: formRef.elements.LastName.value,
         address: formRef.elements.address.value,
         apartments: formRef.elements.apartments.value,
         city: formRef.elements.city.value,
         country: formRef.elements.country.value,
         postalCode: formRef.elements.postalCode.value,
+        totalPrice: totalPrice.innerText,
+        date,
       },
       products,
-      totalPrice: totalPrice.innerText,
     };
 
     fetch(`${BASE_URL}/order/chekout`, {
       method: 'POST',
-      body: JSON.stringify(orderData),
+      body: JSON.stringify(formData),
       headers: {
         'Content-Type': 'application/json',
       },
