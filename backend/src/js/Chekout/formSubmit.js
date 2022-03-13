@@ -13,7 +13,7 @@
 
     if (!productCart.length > 0) return;
 
-    const products = productCart.map(({ id, quantity }) => ({
+    const productsData = productCart.map(({ id, quantity }) => ({
       productId: Number(id),
       quantity: Number(quantity),
     }));
@@ -34,7 +34,7 @@
         totalPrice: totalPrice.innerText,
         date,
       },
-      products,
+      productsData,
     };
 
     fetch(`${BASE_URL}/order/chekout`, {

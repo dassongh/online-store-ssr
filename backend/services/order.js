@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const nanoid = require('nanoid');
+const { nanoid } = require('nanoid');
+
+const { postOrder, postOrderProducts } = require('../core/orderHelper');
 
 router.get('/cart', (req, res, next) => {
   res.render('Cart', {
@@ -16,10 +18,14 @@ router.get('/chekout', (req, res, next) => {
   });
 });
 
-router.post('/chekout', (req, res, next) => {
-  const orderInfo = req.body;
+router.post('/chekout', async (req, res, next) => {
+  const { orderData, productsData } = req.body;
+  const id = nanoid();
 
-  console.log(orderInfo);
+  const order = await postOrder(orderData, id);
+  const products = await postOrderProducts(productsData, id);
+
+  console.log(order, products, id);
 });
 
 module.exports = router;

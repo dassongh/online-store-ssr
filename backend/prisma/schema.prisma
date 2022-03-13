@@ -27,7 +27,7 @@ model Products {
 }
 
 model Order_products {
-  orderId   Int      @map("order_id")
+  orderId   String   @map("order_id")
   productId Int      @map("product_id")
   quantity  Int
   orders    Orders   @relation(fields: [orderId], references: [id], onDelete: NoAction, onUpdate: NoAction)
@@ -37,7 +37,7 @@ model Order_products {
 }
 
 model Orders {
-  id             Int              @id
+  id             String           @id
   contact        String           @db.VarChar(50)
   newsletter     Boolean
   firstName      String           @db.VarChar(50)
