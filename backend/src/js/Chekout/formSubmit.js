@@ -1,5 +1,10 @@
+import { renderParagraph } from './renderProducts';
+
 (function () {
   const formRef = document.querySelector('.form');
+  const chekoutTotalsRef = document.querySelector('.chekout__totals');
+  const shopCartListRef = document.querySelector('.shop-cart__list');
+  const cartIndicatorRef = document.querySelector('.cart-indicator');
 
   if (!formRef) return;
 
@@ -32,6 +37,7 @@
         country: formRef.elements.country.value,
         postalCode: formRef.elements.postalCode.value,
         totalPrice: totalPrice.innerText,
+        status: 'unhandled',
         date,
       },
       productsData,
@@ -44,7 +50,14 @@
         'Content-Type': 'application/json',
       },
     })
-      .then(res => console.log('Success', res))
+      .then(res => {
+        formRef.reset();
+        localStorage.removeItem('productCart');
+        renderParagraph(chekoutTotalsRef);
+        shopCartListRef.innerHTML = '';
+        cartIndicatorRef.classList.add('cart-indicator--hidden');
+        console.log('Success', res);
+      })
       .catch(err => console.log('Error', err));
   });
 })();

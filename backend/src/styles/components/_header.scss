@@ -183,10 +183,37 @@
 .header__icons-item {
   margin-left: 25px;
 
+  & a {
+    position: relative;
+  }
+
   @media screen and (max-width: 767px) {
     &:first-child {
       margin-left: 0;
     }
+  }
+}
+
+.cart-indicator {
+  position: absolute;
+  top: -18px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  background-color: #88b13e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & span {
+    font-weight: 500;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  &--hidden {
+    display: none;
   }
 }
 
@@ -257,6 +284,16 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
+
+.header__container-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: whitesmoke;
+  z-index: 999;
+  max-width: 2400px;
+  padding-left: 70px;
 }
 
 .header__main-mobile {

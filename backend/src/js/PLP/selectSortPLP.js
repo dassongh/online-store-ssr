@@ -1,4 +1,6 @@
 import { renderProduct } from './paginationPLP';
+import { BASE_URL } from '../constants';
+import { addItemToCart } from '../addingToCart';
 
 (function () {
   const refs = {
@@ -7,8 +9,6 @@ import { renderProduct } from './paginationPLP';
   };
 
   if (!refs.select) return;
-
-  const BASE_URL = 'http://localhost:3000';
 
   refs.select.addEventListener('change', e => {
     const sort = e.target.value;
@@ -30,6 +30,14 @@ import { renderProduct } from './paginationPLP';
         const markup = res.map(el => renderProduct(el)).join('');
 
         refs.list.innerHTML = markup;
+        const addToCartRefs = {
+          title: document.querySelectorAll('[data-title]'),
+          price: document.querySelectorAll('[data-price]'),
+          image: document.querySelectorAll('[data-image]'),
+          container: document.querySelector('.shop-cart__list'),
+          totalPrice: document.querySelector('[data-total]'),
+        };
+        addItemToCart(addToCartRefs, refs.list);
       });
   });
 })();

@@ -25,7 +25,11 @@ router.post('/chekout', async (req, res, next) => {
   const order = await postOrder(orderData, id);
   const products = await postOrderProducts(productsData, id);
 
-  console.log(order, products, id);
+  res.json({
+    order,
+    products,
+    id,
+  });
 });
 
 module.exports = router;

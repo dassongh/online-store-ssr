@@ -1,24 +1,32 @@
+import setCartIndicator from './cartIndicator';
+
 const refs = {
-  title: document.querySelectorAll('[data-title]'),
-  price: document.querySelectorAll('[data-price]'),
-  image: document.querySelectorAll('[data-image]'),
-  container: document.querySelector('.shop-cart__list'),
-  totalPrice: document.querySelector('[data-total]'),
   productsList: document.querySelector('.collection__choice-main'),
   weekDealsList: document.querySelector('.weekDeals__main-list'),
   featureList: document.querySelector('.feature-list'),
   productsListPLP: document.querySelector('.product-list__list'),
 };
 
+const addToCartRefs = {
+  title: document.querySelectorAll('[data-title]'),
+  price: document.querySelectorAll('[data-price]'),
+  image: document.querySelectorAll('[data-image]'),
+  container: document.querySelector('.shop-cart__list'),
+  totalPrice: document.querySelector('[data-total]'),
+};
+
 if (refs.productsList && refs.weekDealsList && refs.featureList) {
-  addItemToCart(refs.productsList, refs.weekDealsList, refs.featureList);
+  addItemToCart(addToCartRefs, refs.productsList, refs.weekDealsList, refs.featureList);
+  setCartIndicator();
 } else if (refs.productsListPLP) {
-  addItemToCart(refs.productsListPLP);
+  addItemToCart(addToCartRefs, refs.productsListPLP);
+  setCartIndicator();
 } else if (refs.productsList) {
-  addItemToCart(refs.productsList);
+  addItemToCart(addToCartRefs, refs.productsList);
+  setCartIndicator();
 }
 
-export function addItemToCart(...productLists) {
+export function addItemToCart(refs, ...productLists) {
   refs.container.innerHTML = '';
 
   let products = null;
@@ -72,6 +80,7 @@ export function addItemToCart(...productLists) {
       }
 
       localStorage.setItem('productCart', JSON.stringify(products));
+      setCartIndicator();
     }
   }
 
@@ -119,6 +128,8 @@ export function addItemToCart(...productLists) {
       setTimeout(() => {
         refs.totalPrice.innerText = countTotal();
       }, 0);
+
+      setCartIndicator();
     });
 
     refs.container.appendChild(productLi);

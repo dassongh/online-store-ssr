@@ -1,4 +1,5 @@
 import { countTotal } from '../addingToCart';
+import setCartIndicator from '../cartIndicator';
 
 const refs = {
   container: document.querySelector('.shop-cart__list'),
@@ -9,8 +10,10 @@ const refs = {
 
 if (refs.tableContainer) {
   renderSideCart();
+  setCartIndicator();
 } else if (refs.chekoutProducts) {
   renderSideCart();
+  setCartIndicator();
 }
 
 function renderSideCart() {

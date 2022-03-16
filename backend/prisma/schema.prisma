@@ -49,5 +49,6 @@ model Orders {
   postalCode     String           @db.VarChar(50)
   totalPrice     String           @db.VarChar(50)
   date           String           @db.VarChar(50)
+  status         String           @db.VarChar(50)
   order_products Order_products[]
 }

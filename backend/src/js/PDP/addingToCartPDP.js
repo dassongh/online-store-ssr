@@ -2,19 +2,22 @@ import { addItemToCart } from '../addingToCart';
 import { countTotal } from '../addingToCart';
 
 const refs = {
-  title: document.querySelectorAll('[data-title]'),
-  price: document.querySelectorAll('[data-price]'),
-  image: document.querySelectorAll('[data-image]'),
-  container: document.querySelector('.shop-cart__list'),
-  totalPrice: document.querySelector('[data-total]'),
   button: document.querySelector('.product__info-addBtn'),
   plusButton: document.querySelector('[data-plus]'),
   minusButton: document.querySelector('[data-minus]'),
   quantity: document.querySelector('[data-quantity]'),
 };
 
+const addToCartRefs = {
+  title: document.querySelectorAll('[data-title]'),
+  price: document.querySelectorAll('[data-price]'),
+  image: document.querySelectorAll('[data-image]'),
+  container: document.querySelector('.shop-cart__list'),
+  totalPrice: document.querySelector('[data-total]'),
+};
+
 if (refs.button) {
-  addItemToCart(refs.button);
+  addItemToCart(addToCartRefs, refs.button);
   refs.button.addEventListener('click', () => {
     renderQuantity();
   });
@@ -36,7 +39,7 @@ if (refs.plusButton) {
 
       localStorage.setItem('productCart', JSON.stringify(updatedCart));
 
-      refs.totalPrice.innerText = countTotal();
+      addToCartRefs.totalPrice.innerText = countTotal();
 
       renderQuantity();
       renderCartQuantity();
@@ -56,7 +59,7 @@ if (refs.plusButton) {
 
       localStorage.setItem('productCart', JSON.stringify(updatedCart));
 
-      refs.totalPrice.innerText = countTotal();
+      addToCartRefs.totalPrice.innerText = countTotal();
 
       renderQuantity();
       renderCartQuantity();

@@ -4,24 +4,24 @@
       <form class="form">
         <div class="form__contact">
           <h3>Contact information</h3>
-          <input type="text" name="contact" placeholder="Email or phone number" />
+          <input type="text" name="contact" placeholder="Email or phone number" required/>
           <label class="form__checkbox">
-            <input type="checkbox" name="newsletter"/>
+            <input type="checkbox" name="newsletter" />
             <span>Keep me up to date on news and exclusive offers</span>
           </label>
         </div>
         <div class="form__address">
           <h3>Shipping address</h3>
           <ul class="form__fullname">
-            <li><input type="text" name="FirstName" placeholder="First name" /></li>
-            <li><input type="text" name="LastName" placeholder="Last name" /></li>
+            <li><input type="text" name="FirstName" placeholder="First name" required/></li>
+            <li><input type="text" name="LastName" placeholder="Last name" required/></li>
           </ul>
-          <input type="text" name="address" placeholder="Address" />
-          <input type="text" name="apartments" placeholder="Apartments, suite, etc" />
-          <input type="text" name="city" placeholder="City" />
+          <input type="text" name="address" placeholder="Address" required/>
+          <input type="text" name="apartments" placeholder="Apartments, suite, etc" required/>
+          <input type="text" name="city" placeholder="City" required/>
           <ul class="form__country">
-            <li><input type="text" name="country" placeholder="Country, region" /></li>
-            <li><input type="text" name="postalCode" placeholder="Postal code" /></li>
+            <li><input type="text" name="country" placeholder="Country, region" required/></li>
+            <li><input type="text" name="postalCode" placeholder="Postal code" required/></li>
           </ul>
           <div class="form__buttons">
             <button class="form__confirm" type="submit">confirm</button>

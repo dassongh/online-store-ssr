@@ -102,7 +102,6 @@ router.get('/:category', async (req, res, next) => {
   const ultraSaleProducts = await returnUltraSale();
   const featureProducts = await returnFeatureProducts();
 
-  //res.json ruins slider
   res.render('main', {
     homePage: true,
     categoriesNumber,

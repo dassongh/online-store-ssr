@@ -92,8 +92,7 @@
   color: #111111;
   padding: 12px 30px;
   background: #ececec;
-  cursor: pointer;
-  border: none;
+  text-decoration: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {

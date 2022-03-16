@@ -14,6 +14,9 @@ import './js/Cart/renderSideCart';
 import './js/Cart/renderMainCart';
 import './js/Chekout/renderProducts';
 import './js/Chekout/formSubmit';
+import './js/constants';
+import './js/fixedHeader';
+import './js/cartIndicator';
 
 import './styles/main.scss';
 import './styles/owlCarousel/owl.carousel.min.css';

@@ -10,11 +10,7 @@
     chekoutTotalsRef.appendChild(list);
     chekoutTotalsRef.insertAdjacentHTML('beforeend', totalPriceMarkup);
   } else {
-    renderParagraph();
-  }
-
-  function renderParagraph() {
-    chekoutTotalsRef.innerHTML = '<p class="chekout__paragraph">Cart is empty</p>';
+    renderParagraph(chekoutTotalsRef);
   }
 
   function renderProducts(products) {
@@ -64,3 +60,7 @@
     return { list, totalPriceMarkup };
   }
 })();
+
+export function renderParagraph(ref) {
+  ref.innerHTML = '<p class="chekout__paragraph">Cart is empty</p>';
+}

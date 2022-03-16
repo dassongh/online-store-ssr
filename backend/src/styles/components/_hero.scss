@@ -2,6 +2,10 @@
   padding: 155px 0 285px;
   background-color: #99ecfe;
 
+  &--header-fixed {
+    padding-top: 255px;
+  }
+
   @media screen and (max-width: 767px) {
     padding: 100px 0 235px;
   }
