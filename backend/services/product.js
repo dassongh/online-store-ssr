@@ -18,4 +18,10 @@ router.get('/:id', async (req, res, next) => {
   });
 });
 
+// router.post('/:id', (req, res, next) => {
+//   const data = req.body;
+
+//   res.json(data);
+// });
+
 module.exports = router;

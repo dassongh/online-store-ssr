@@ -1,4 +1,5 @@
 import { renderParagraph } from './renderProducts';
+import { BASE_URL } from '../constants';
 
 (function () {
   const formRef = document.querySelector('.form');
@@ -8,15 +9,13 @@ import { renderParagraph } from './renderProducts';
 
   if (!formRef) return;
 
-  const BASE_URL = 'http://localhost:3000';
-
   formRef.addEventListener('submit', e => {
     e.preventDefault();
 
     const productCart = JSON.parse(localStorage.getItem('productCart'));
     const totalPrice = document.querySelector('.chekout__total-price');
 
-    if (!productCart.length > 0) return;
+    if (!productCart || !productCart.length > 0) return;
 
     const productsData = productCart.map(({ id, quantity }) => ({
       productId: Number(id),
@@ -26,20 +25,18 @@ import { renderParagraph } from './renderProducts';
     const date = new Date().toLocaleString();
 
     const formData = {
-      orderData: {
-        contact: formRef.elements.contact.value,
-        newsletter: formRef.elements.newsletter.checked,
-        firstName: formRef.elements.FirstName.value,
-        lastName: formRef.elements.LastName.value,
-        address: formRef.elements.address.value,
-        apartments: formRef.elements.apartments.value,
-        city: formRef.elements.city.value,
-        country: formRef.elements.country.value,
-        postalCode: formRef.elements.postalCode.value,
-        totalPrice: totalPrice.innerText,
-        status: 'unhandled',
-        date,
-      },
+      email: formRef.elements.email.value,
+      phone: formRef.elements.phone.value,
+      newsletter: formRef.elements.newsletter.checked,
+      firstName: formRef.elements.FirstName.value,
+      lastName: formRef.elements.LastName.value,
+      address: formRef.elements.address.value,
+      city: formRef.elements.city.value,
+      country: formRef.elements.country.value,
+      postalCode: Number(formRef.elements.postalCode.value),
+      totalPrice: totalPrice.innerText,
+      status: 'unhandled',
+      date,
       productsData,
     };
 
@@ -50,6 +47,7 @@ import { renderParagraph } from './renderProducts';
         'Content-Type': 'application/json',
       },
     })
+      .then(res => res.json())
       .then(res => {
         formRef.reset();
         localStorage.removeItem('productCart');
@@ -58,6 +56,6 @@ import { renderParagraph } from './renderProducts';
         cartIndicatorRef.classList.add('cart-indicator--hidden');
         console.log('Success', res);
       })
-      .catch(err => console.log('Error', err));
+      .catch(err => alert('Error with submiting form: ', err));
   });
 })();

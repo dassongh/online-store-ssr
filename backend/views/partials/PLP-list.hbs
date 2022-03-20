@@ -51,7 +51,7 @@
 
               {{#each products}}
               <li class="product-list__item">
-                <div class="thumb" data-id="{{ id }}">
+                <div class="thumb product-list__thumb" data-id="{{ id }}">
                     <img src="{{ image_url }}" alt="{{ category }}" data-image="{{ id }}">
 
                     {{#if (isSaleAndNew old_price isNew)}}

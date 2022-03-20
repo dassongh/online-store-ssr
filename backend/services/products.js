@@ -32,6 +32,7 @@ router.get('/products/', async (req, res, next) => {
 
   let categoryName = '';
   let productsTotal = null;
+  let outputProducts = null;
 
   if (category === 'all') {
     categoryName = 'All products';
@@ -71,26 +72,52 @@ router.get('/products/', async (req, res, next) => {
   if (page) {
     const indexToStart = (page - 1) * 15;
     sortBy(productsTotal, sort);
-    const products = [...productsTotal.slice(indexToStart, indexToStart + 15)];
-
-    res.json(products);
+    outputProducts = [...productsTotal.slice(indexToStart, indexToStart + 15)];
   } else {
     sortBy(productsTotal, sort);
-    const products = [...productsTotal.slice(0, 15)];
-
-    const quantity = {
-      total: productsTotal.length,
-      returned: products.length,
-    };
-
-    res.render('PLP', {
-      shopPage: true,
-      categoryName,
-      quantity,
-      products,
-      pageArr,
-    });
+    outputProducts = [...productsTotal.slice(0, 15)];
   }
+
+  const quantity = {
+    total: productsTotal.length,
+    returned: outputProducts.length,
+  };
+
+  res.render('PLP', {
+    shopPage: true,
+    categoryName,
+    quantity,
+    products: outputProducts,
+    pageArr,
+  });
+});
+
+router.post('/products/', async (req, res, next) => {
+  const category = req.query.category;
+
+  let productsTotal = null;
+
+  if (category === 'all') {
+    productsTotal = await getAllProducts();
+  } else {
+    productsTotal = await returnCategory(category);
+  }
+
+  const page = req.query.page;
+  const pages = Math.ceil(productsTotal.length / 15);
+  const pageArr = [];
+  for (let i = 1; i <= pages; i++) {
+    pageArr.push(i);
+  }
+
+  let sort = req.query._sort_;
+  if (!sort) sort = 'default';
+
+  const indexToStart = (page - 1) * 15;
+  sortBy(productsTotal, sort);
+  const products = [...productsTotal.slice(indexToStart, indexToStart + 15)];
+
+  res.json(products);
 });
 
 //homepage

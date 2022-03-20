@@ -20,6 +20,7 @@ app.use(express.static('dist'));
 app.use('/products/', express.static('dist'));
 app.use('/product/', express.static('dist'));
 app.use('/order/', express.static('dist'));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

@@ -19,7 +19,12 @@ import { addItemToCart } from '../addingToCart';
     const category = params.category;
     const page = params.page;
 
-    fetch(`${BASE_URL}/products/?category=${category}&page=${page ? page : '1'}&_sort_=${sort}`)
+    fetch(`${BASE_URL}/products/?category=${category}&page=${page ? page : '1'}&_sort_=${sort}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
       .then(res => res.json())
       .then(res => {
         console.log(page);

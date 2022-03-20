@@ -4,7 +4,8 @@
       <form class="form">
         <div class="form__contact">
           <h3>Contact information</h3>
-          <input type="text" name="contact" placeholder="Email or phone number" required/>
+          <input type="email" name="email" placeholder="Email" required/>
+          <input type="tel" pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}" title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +" name="phone" placeholder="Phone number" required/>
           <label class="form__checkbox">
             <input type="checkbox" name="newsletter" />
             <span>Keep me up to date on news and exclusive offers</span>
@@ -17,11 +18,10 @@
             <li><input type="text" name="LastName" placeholder="Last name" required/></li>
           </ul>
           <input type="text" name="address" placeholder="Address" required/>
-          <input type="text" name="apartments" placeholder="Apartments, suite, etc" required/>
           <input type="text" name="city" placeholder="City" required/>
           <ul class="form__country">
             <li><input type="text" name="country" placeholder="Country, region" required/></li>
-            <li><input type="text" name="postalCode" placeholder="Postal code" required/></li>
+            <li><input type="text" pattern="[0-9]{4,10}" title="Contains only digits, from 4 to 10 symbols" name="postalCode" placeholder="Postal code" required/></li>
           </ul>
           <div class="form__buttons">
             <button class="form__confirm" type="submit">confirm</button>

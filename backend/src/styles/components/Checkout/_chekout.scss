@@ -5,12 +5,27 @@
 .chekout__container {
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .chekout__form {
   padding-right: 74px;
   border-right: 1px solid #ececec;
-  flex-basis: 884px;
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    padding-right: 54px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding-right: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-right: 0;
+  }
 }
 
 .form {
@@ -19,6 +34,14 @@
 
     & li:first-child {
       margin-right: 20px;
+
+      @media screen and (max-width: 767px) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
     }
   }
 
@@ -57,12 +80,32 @@
 .form__fullname {
   & input {
     width: 395px;
+
+    @media screen and (max-width: 1409px) {
+      width: auto;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
   }
 }
 
 .form__country {
   & input {
     width: 395px;
+
+    @media screen and (max-width: 1409px) {
+      width: auto;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 }
 
@@ -75,6 +118,10 @@
   font-weight: 400;
   font-size: 15px;
   color: #333333;
+
+  @media screen and (max-width: 767px) {
+    font-size: 13px;
+  }
 }
 
 .form__buttons {
@@ -155,6 +202,10 @@
   font-size: 18px;
   line-height: 1.67;
   color: #333333;
+
+  @media screen and (max-width: 767px) {
+    font-size: 13px;
+  }
 }
 
 .chekout__quantity {
@@ -163,6 +214,10 @@
   line-height: 1.39;
   color: #60a00c;
   margin-right: 2px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
 }
 
 .chekout__price {
@@ -170,6 +225,10 @@
   font-size: 18px;
   line-height: 1.39;
   color: #111111;
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 
 .chekout__subtotal {
@@ -182,12 +241,20 @@
     font-size: 15px;
     line-height: 2.13;
     color: #333333;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   }
 
   & .chekout__subtotal-price {
     font-weight: 500;
     font-size: 15px;
     color: #111111;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   }
 
   & div {

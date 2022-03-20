@@ -5,7 +5,9 @@
 
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 
-  if (productCart.length > 0) {
+  if (!productCart) {
+    renderParagraph(chekoutTotalsRef);
+  } else if (productCart.length > 0) {
     const { list, totalPriceMarkup } = renderProducts(productCart);
     chekoutTotalsRef.appendChild(list);
     chekoutTotalsRef.insertAdjacentHTML('beforeend', totalPriceMarkup);

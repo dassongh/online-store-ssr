@@ -26,7 +26,12 @@ import { BASE_URL } from '../constants';
       const sort = params._sort_;
       const category = params.category;
 
-      fetch(`${BASE_URL}/products/?category=${category}&page=${page}&_sort_=${sort !== 'default' ? sort : 'default'}`)
+      fetch(`${BASE_URL}/products/?category=${category}&page=${page}&_sort_=${sort !== 'default' ? sort : 'default'}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
         .then(res => res.json())
         .then(res => {
           const params = new URLSearchParams(window.location.search);

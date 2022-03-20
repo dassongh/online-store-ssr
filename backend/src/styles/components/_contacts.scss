@@ -5,6 +5,10 @@
   &--secondary {
     padding-top: 30px;
     background-color: #39413a;
+
+    @media screen and (max-width: 767px) {
+      padding: 60px 0 60px !important;
+    }
   }
 
   @media screen and (max-width: 767px) {

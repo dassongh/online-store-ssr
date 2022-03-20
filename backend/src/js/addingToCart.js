@@ -1,4 +1,5 @@
 import setCartIndicator from './cartIndicator';
+// import shopCartProduct from '../templates/shopCartProduct.hbs';
 
 const refs = {
   productsList: document.querySelector('.collection__choice-main'),

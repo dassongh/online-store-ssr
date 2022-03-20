@@ -38,15 +38,15 @@ model Order_products {
 
 model Orders {
   id             String           @id
-  contact        String           @db.VarChar(50)
+  email          String           @db.VarChar(50)
+  phone          String           @db.VarChar(50)
   newsletter     Boolean
   firstName      String           @db.VarChar(50)
   lastName       String           @db.VarChar(50)
   address        String           @db.VarChar(100)
-  apartments     String           @db.VarChar(100)
   city           String           @db.VarChar(50)
   country        String           @db.VarChar(50)
-  postalCode     String           @db.VarChar(50)
+  postalCode     Int
   totalPrice     String           @db.VarChar(50)
   date           String           @db.VarChar(50)
   status         String           @db.VarChar(50)

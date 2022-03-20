@@ -293,7 +293,7 @@
   background-color: whitesmoke;
   z-index: 999;
   max-width: 2400px;
-  padding-left: 70px;
+  padding-left: 4.5vw;
 }
 
 .header__main-mobile {
@@ -316,6 +316,14 @@
     @media screen and (min-width: 768px) {
       display: none;
     }
+  }
+
+  &--fixed {
+    position: fixed;
+    right: 10px;
+    background-color: whitesmoke;
+    padding: 6px 10px 2px;
+    z-index: 999;
   }
 }
 
