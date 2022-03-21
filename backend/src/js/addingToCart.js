@@ -40,6 +40,13 @@ export function addItemToCart(refs, ...productLists) {
     products = [];
   }
 
+  // const pageOneRef = document.querySelector('[data-page]');
+  // if (pageOneRef) {
+  //   console.log(pageOneRef);
+  //   console.log(productLists);
+  //   productLists.forEach(el => el.removeEventListener('click', addToCart));
+  // }
+
   productLists.forEach(el => el.addEventListener('click', addToCart));
 
   function addToCart(e) {

@@ -27,7 +27,6 @@ import { addItemToCart } from '../addingToCart';
     })
       .then(res => res.json())
       .then(res => {
-        console.log(page);
         const params = new URLSearchParams(window.location.search);
         params.set('_sort_', sort);
         window.history.replaceState({}, '', `${window.location.pathname}?${params}`);

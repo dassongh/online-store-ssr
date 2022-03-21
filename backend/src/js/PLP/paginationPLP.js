@@ -1,5 +1,4 @@
 import { addItemToCart } from '../addingToCart';
-import { countTotal } from '../addingToCart';
 import { BASE_URL } from '../constants';
 
 (function () {
