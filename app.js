@@ -27,5 +27,3 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', products);
 app.use('/product/', product);
 app.use('/order/', order);
-
-app.listen(3000);
