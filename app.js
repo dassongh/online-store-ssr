@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 
 const hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials');
@@ -27,3 +28,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', products);
 app.use('/product/', product);
 app.use('/order/', order);
+
+app.listen(port);
