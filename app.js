@@ -1,6 +1,8 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+
+const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
 
 const hbs = require('hbs');
@@ -29,4 +31,6 @@ app.use('/', products);
 app.use('/product/', product);
 app.use('/order/', order);
 
-app.listen(port);
+app.listen(port, host, () => {
+  console.log('Server started.......');
+});
