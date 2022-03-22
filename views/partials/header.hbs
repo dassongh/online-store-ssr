@@ -113,9 +113,15 @@
             </li>
             <li class="header__link-item">
               <a class="header__link" href="">Blog</a>
-            </li>
+            </li>  
             <li class="header__link-item">
-              <a class="header__link" href="">Contact</a>
+              
+              {{#if contactPage}}
+              <a class="header__link header__link--current" href="/contact/howToFind">Contact</a>
+              {{else}}  
+              <a class="header__link" href="/contact/howToFind">Contact</a>
+              {{/if}}
+
             </li>
           </ul>
 

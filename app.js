@@ -15,6 +15,7 @@ hbs.registerHelper('isSaleAndNew', (oldPrice, isNew) => oldPrice && isNew);
 const products = require('./services/products');
 const product = require('./services/product');
 const order = require('./services/order');
+const contact = require('./services/contact');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +24,7 @@ app.use(express.static('dist'));
 app.use('/products/', express.static('dist'));
 app.use('/product/', express.static('dist'));
 app.use('/order/', express.static('dist'));
+app.use('/contact/', express.static('dist'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -30,6 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', products);
 app.use('/product/', product);
 app.use('/order/', order);
+app.use('/contact/', contact);
 
 app.listen(port, host, () => {
   console.log('Server started.......');

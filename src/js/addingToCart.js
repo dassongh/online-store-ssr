@@ -6,6 +6,7 @@ const refs = {
   weekDealsList: document.querySelector('.weekDeals__main-list'),
   featureList: document.querySelector('.feature-list'),
   productsListPLP: document.querySelector('.product-list__list'),
+  contactPage: document.querySelector('.contact'),
 };
 
 const addToCartRefs = {
@@ -25,6 +26,9 @@ if (refs.productsList && refs.weekDealsList && refs.featureList) {
 } else if (refs.productsList) {
   addItemToCart(addToCartRefs, refs.productsList);
   setCartIndicator();
+} else if (refs.contactPage) {
+  addItemToCart(addToCartRefs, refs.contactPage);
+  setCartIndicator();
 }
 
 export function addItemToCart(refs, ...productLists) {
@@ -39,13 +43,6 @@ export function addItemToCart(refs, ...productLists) {
   } else {
     products = [];
   }
-
-  // const pageOneRef = document.querySelector('[data-page]');
-  // if (pageOneRef) {
-  //   console.log(pageOneRef);
-  //   console.log(productLists);
-  //   productLists.forEach(el => el.removeEventListener('click', addToCart));
-  // }
 
   productLists.forEach(el => el.addEventListener('click', addToCart));
 
