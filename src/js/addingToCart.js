@@ -92,7 +92,9 @@ export function addItemToCart(...productLists) {
     const markup = `
         <div class="shop-cart__info">
           <div class="shop-cart__imgThumb">
-            <img src="${imageUrl}" />
+            <a href="/product/:${id}">
+              <img src="${imageUrl}" />
+            </a>
           </div>
           <div >
             <p class="shop-cart__name">${title}</p>
