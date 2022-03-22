@@ -17,6 +17,7 @@ import './js/Chekout/formSubmit';
 import './js/constants';
 import './js/fixedHeader';
 import './js/cartIndicator';
+import './js/wishList';
 
 import './styles/main.scss';
 import './styles/owlCarousel/owl.carousel.min.css';
