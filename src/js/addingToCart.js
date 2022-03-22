@@ -1,7 +1,11 @@
 import setCartIndicator from './cartIndicator';
-// import shopCartProduct from '../templates/shopCartProduct.hbs';
 
 const refs = {
+  title: document.querySelectorAll('[data-title]'),
+  price: document.querySelectorAll('[data-price]'),
+  image: document.querySelectorAll('[data-image]'),
+  container: document.querySelector('.shop-cart__list'),
+  totalPrice: document.querySelector('[data-total]'),
   productsList: document.querySelector('.collection__choice-main'),
   weekDealsList: document.querySelector('.weekDeals__main-list'),
   featureList: document.querySelector('.feature-list'),
@@ -9,29 +13,21 @@ const refs = {
   contactPage: document.querySelector('.contact'),
 };
 
-const addToCartRefs = {
-  title: document.querySelectorAll('[data-title]'),
-  price: document.querySelectorAll('[data-price]'),
-  image: document.querySelectorAll('[data-image]'),
-  container: document.querySelector('.shop-cart__list'),
-  totalPrice: document.querySelector('[data-total]'),
-};
-
 if (refs.productsList && refs.weekDealsList && refs.featureList) {
-  addItemToCart(addToCartRefs, refs.productsList, refs.weekDealsList, refs.featureList);
+  addItemToCart(refs.productsList, refs.weekDealsList, refs.featureList);
   setCartIndicator();
 } else if (refs.productsListPLP) {
-  addItemToCart(addToCartRefs, refs.productsListPLP);
+  addItemToCart(refs.productsListPLP);
   setCartIndicator();
 } else if (refs.productsList) {
-  addItemToCart(addToCartRefs, refs.productsList);
+  addItemToCart(refs.productsList);
   setCartIndicator();
 } else if (refs.contactPage) {
-  addItemToCart(addToCartRefs, refs.contactPage);
+  addItemToCart(refs.contactPage);
   setCartIndicator();
 }
 
-export function addItemToCart(refs, ...productLists) {
+export function addItemToCart(...productLists) {
   refs.container.innerHTML = '';
 
   let products = null;
