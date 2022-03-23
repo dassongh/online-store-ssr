@@ -1,0 +1,159 @@
+.weekDeals {
+  background-color: #c4c4c4;
+  padding: 65px 0 280px;
+  position: relative;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding-bottom: 225px;
+  }
+}
+
+.weekDeals__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weekDeals__sale {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.weekDeals__sale-text {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  text-align: center;
+}
+
+.weekDeals__heading {
+  font-family: 'LobsterTwo';
+  font-weight: 400;
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: white;
+
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+}
+
+.weekDeals__time-list {
+  display: flex;
+  margin-right: -10px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 45px;
+  }
+}
+
+.weekDeals__time-item {
+  position: relative;
+  margin-right: 50px;
+}
+
+.weekDeals__time-info {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.weekDeals__number {
+  font-weight: 500;
+  font-size: 36px;
+  color: white;
+  margin-right: 10px;
+}
+
+.weekDeals__time-text {
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+}
+
+.weekDeals__main {
+  position: absolute;
+  width: 1380px;
+  background-color: white;
+  padding: 33px 30px 30px;
+  top: 300px;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 5px 35px rgba(138, 159, 168, 0.2);
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding: 13px 10px 10px;
+    width: 738px;
+    top: 350px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    padding: 23px 20px 20px;
+    width: 990px;
+    top: 380px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 15px 5px 15px;
+    width: 300px;
+    top: 350px;
+  }
+}
+
+.weekDeals__main-list {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin: -9px;
+  }
+}
+.weekDeals__main-item {
+  margin-right: 30px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-right: 15px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 9px;
+  }
+}
+
+.weekDeals__main-thumb {
+  width: 308px;
+  height: 310px;
+  background-color: #fafafa;
+
+  &:hover .thumb__buttons-list {
+    opacity: 1;
+  }
+
+  &:hover .thumb__like-btn {
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 168px;
+    height: 170px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    width: 214px;
+    height: 216px;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 135px;
+    height: 148px;
+  }
+}

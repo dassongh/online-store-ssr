@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Products {
+  title                 String           @db.VarChar(50)
+  price                 String           @db.VarChar(50)
+  old_price             String?          @db.VarChar(50)
+  category              String           @db.VarChar(50)
+  description           String
+  image_url             String           @db.VarChar(500)
+  raiting               Int
+  quantity              Int?
+  isNew                 Boolean
+  isUltraSale           Boolean
+  isFeatureProduct      Boolean
+  id                    Int              @id(map: "products_pkey") @default(autoincrement())
+  additionalDescription String?
+  additionalInfo        String?
+  reviews               String?
+  order_products        Order_products[]
+}
+
+model Order_products {
+  orderId   String   @map("order_id")
+  productId Int      @map("product_id")
+  quantity  Int
+  orders    Orders   @relation(fields: [orderId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products  Products @relation(fields: [productId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([orderId, productId])
+}
+
+model Orders {
+  id             String           @id
+  email          String           @db.VarChar(50)
+  phone          String           @db.VarChar(50)
+  newsletter     Boolean
+  firstName      String           @db.VarChar(50)
+  lastName       String           @db.VarChar(50)
+  address        String           @db.VarChar(100)
+  city           String           @db.VarChar(50)
+  country        String           @db.VarChar(50)
+  postalCode     Int
+  totalPrice     String           @db.VarChar(50)
+  date           String           @db.VarChar(50)
+  status         String           @db.VarChar(50)
+  order_products Order_products[]
+}

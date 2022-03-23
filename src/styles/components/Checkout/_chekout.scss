@@ -1,0 +1,291 @@
+.chekout {
+  padding: 80px 0;
+}
+
+.chekout__container {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.chekout__form {
+  padding-right: 74px;
+  border-right: 1px solid #ececec;
+
+  @media screen and (min-width: 1024px) and (max-width: 1409px) {
+    padding-right: 54px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding-right: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-right: 0;
+  }
+}
+
+.form {
+  & ul {
+    display: flex;
+
+    & li:first-child {
+      margin-right: 20px;
+
+      @media screen and (max-width: 767px) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  & input {
+    padding: 12px 0 12px 20px;
+    border: none;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.57;
+      color: #888888;
+    }
+
+    &:focus {
+      outline: 1px solid #60a00c;
+    }
+  }
+
+  & h3 {
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 30px;
+  }
+}
+
+.form__contact {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.form__fullname {
+  & input {
+    width: 395px;
+
+    @media screen and (max-width: 1409px) {
+      width: auto;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.form__country {
+  & input {
+    width: 395px;
+
+    @media screen and (max-width: 1409px) {
+      width: auto;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+
+.form__address {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__checkbox {
+  font-weight: 400;
+  font-size: 15px;
+  color: #333333;
+
+  @media screen and (max-width: 767px) {
+    font-size: 13px;
+  }
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__confirm {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 12px 50px;
+  background-color: #111111;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #60a00c;
+  }
+}
+
+.form__return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 2.4;
+  color: #e32d2d;
+  background-color: transparent;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+
+  & svg {
+    margin-right: 5px;
+    fill: #e32d2d;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    color: #60a00c;
+  }
+
+  &:hover svg {
+    fill: #60a00c;
+  }
+}
+
+.chekout__totals {
+  flex-basis: 450px;
+}
+
+.chekout__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.chekout__products {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ececec;
+
+  & li {
+    list-style: none;
+  }
+}
+
+.chekout__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.67;
+  color: #333333;
+
+  @media screen and (max-width: 767px) {
+    font-size: 13px;
+  }
+}
+
+.chekout__quantity {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.39;
+  color: #60a00c;
+  margin-right: 2px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+.chekout__price {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.39;
+  color: #111111;
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+.chekout__subtotal {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ececec;
+
+  & span {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 2.13;
+    color: #333333;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+
+  & .chekout__subtotal-price {
+    font-weight: 500;
+    font-size: 15px;
+    color: #111111;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.chekout__total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 2.13;
+  color: #333333;
+}
+
+.chekout__currency {
+  color: #888888;
+}
+
+.chekout__total-price {
+  color: #111111;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.chekout__paragraph {
+  font-weight: 500;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 40px;
+}
