@@ -51,6 +51,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@prisma/client": "^3.10.0",
+    "babel-plugin-handlebars-inline-precompile": "^2.1.1",
     "express": "^4.17.3",
     "express-handlebars": "^6.0.2",
     "express-validator": "^6.14.0",

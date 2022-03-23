@@ -110,7 +110,7 @@ module.exports = {
         },
       },
       {
-        test: /\.hbs/,
+        test: /\.handlebars/,
         loader: 'handlebars-loader',
         exclude: /node_modules/,
       },
