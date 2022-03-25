@@ -23,3 +23,12 @@ import './js/addingToWishList';
 import './styles/main.scss';
 import './styles/owlCarousel/owl.carousel.min.css';
 import './styles/owlCarousel/owl.theme.default.min.css';
+
+// product -> productList
+// -next delete
+// productsHelper {}
+// логика в CORE
+// выносить логику
+
+//trailing spaces
+//svg повыносить в отдельные паршалы

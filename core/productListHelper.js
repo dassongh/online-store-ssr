@@ -68,6 +68,34 @@ const sortBy = (products, method) => {
   }
 };
 
+const getPages = products => {
+  const pages = Math.ceil(products.length / 15);
+  const pageArr = [];
+
+  for (let i = 1; i <= pages; i++) {
+    pageArr.push(i);
+  }
+
+  return pageArr;
+};
+
+const returnCategoryName = category => {
+  switch (category) {
+    case 'all':
+      return 'All products';
+    case 'meats':
+      return 'Fresh meats';
+    case 'fruits':
+      return 'Fresh fruits';
+    case 'vegetables':
+      return 'Fresh vegetables';
+    case 'grainAndNuts':
+      return 'Grain & Nuts';
+    case 'smoothies':
+      return 'Smoothies';
+  }
+};
+
 module.exports = {
   getAllProducts,
   calculateQuantity,
@@ -75,4 +103,6 @@ module.exports = {
   returnUltraSale,
   returnFeatureProducts,
   sortBy,
+  getPages,
+  returnCategoryName,
 };

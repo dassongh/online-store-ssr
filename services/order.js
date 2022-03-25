@@ -3,7 +3,7 @@ const router = express.Router();
 const { nanoid } = require('nanoid');
 
 const { check, validationResult } = require('express-validator');
-const { postOrder, postOrderProducts } = require('../core/orderHelper');
+const orderHelper = require('../core/orderHelper');
 
 router.get('/cart', (req, res) => {
   res.render('Cart', {
@@ -40,24 +40,11 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const {
-      email,
-      phone,
-      newsletter,
-      firstName,
-      lastName,
-      address,
-      city,
-      country,
-      postalCode,
-      totalPrice,
-      status,
-      date,
-      productsData,
-    } = req.body;
+    const { email, phone, newsletter, firstName, lastName, address, city, country, postalCode, totalPrice, status, date, productsData } =
+      req.body;
     const id = nanoid();
 
-    await postOrder(
+    await orderHelper.postOrder(
       {
         email,
         phone,
@@ -74,7 +61,7 @@ router.post(
       },
       id,
     );
-    await postOrderProducts(productsData, id);
+    await orderHelper.postOrderProducts(productsData, id);
 
     res.send({ msg: `Created post with id: ${id}`, totalPrice });
   },

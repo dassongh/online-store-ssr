@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const { getProductById } = require('../core/productHelper');
-const { returnCategory } = require('../core/productsHelper');
+const productHelper = require('../core/productHelper');
+const productListHelper = require('../core/productListHelper');
 
-router.get('/:id', async (req, res, next) => {
+router.get('/:id', async (req, res) => {
   const productId = req.params.id.slice(1);
-  const product = await getProductById(Number(productId));
+  const product = await productHelper.getProductById(Number(productId));
   const category = product.category;
-  const products = await returnCategory(category);
+  const products = await productListHelper.returnCategory(category);
 
   res.render('PDP', {
     shopPage: true,
@@ -17,11 +17,5 @@ router.get('/:id', async (req, res, next) => {
     products,
   });
 });
-
-// router.post('/:id', (req, res, next) => {
-//   const data = req.body;
-
-//   res.json(data);
-// });
 
 module.exports = router;

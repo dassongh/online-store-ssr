@@ -3,14 +3,16 @@
 
   if (!chekoutTotalsRef) return;
 
+  const template = document.getElementById('chekoutProduct').content;
+  const templateTotal = document.getElementById('chekoutTotal').content;
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 
   if (!productCart) {
     renderParagraph(chekoutTotalsRef);
   } else if (productCart.length > 0) {
-    const { list, totalPriceMarkup } = renderProducts(productCart);
+    const { list, totalPriceElement } = renderProducts(productCart);
     chekoutTotalsRef.appendChild(list);
-    chekoutTotalsRef.insertAdjacentHTML('beforeend', totalPriceMarkup);
+    chekoutTotalsRef.appendChild(totalPriceElement);
   } else {
     renderParagraph(chekoutTotalsRef);
   }
@@ -19,47 +21,29 @@
     const list = document.createElement('div');
     list.classList.add('chekout__products');
 
-    const listItemsMarkup = products
-      .map(({ id, title, imageUrl, price, quantity }) => {
-        return `
-          <li data-id="${id}">
-            <div class="chekout__info">
-              <div>
-                <div class="shop-cart__imgThumb">
-                  <img src="${imageUrl}" />
-                </div>
-                <span class="chekout__quantity">${quantity}</span><span class="chekout__quantity">x</span>
-                <p class="chekout__name">${title}</p>
-              </div>
-              <span class="chekout__price">$${(Number(quantity) * Number(price.slice(1))).toFixed(2)}</span>
-            </div>
-          </li>
-      `;
-      })
-      .join('');
+    products.forEach(({ id, title, imageUrl, price, quantity }) => {
+      const listItem = document.importNode(template, true);
 
-    list.innerHTML = listItemsMarkup;
+      listItem.querySelector('li').setAttribute('data-id', `${id}`);
+      listItem.querySelector('a').setAttribute('href', `/product/:${id}`);
+      listItem.querySelector('img').setAttribute('src', `${imageUrl}`);
+      listItem.querySelector('.chekout__quantity').textContent = `${quantity}`;
+      listItem.querySelector('.chekout__name').textContent = `${title}`;
+      listItem.querySelector('.chekout__price').textContent = `$${(Number(quantity) * Number(price.slice(1))).toFixed(2)}`;
 
-    const totalPrice = products
-      .reduce((acc, el) => (acc += Number(el.quantity) * Number(el.price.slice(1))), 0)
-      .toFixed(2);
+      list.appendChild(listItem);
+    });
+
+    const totalPrice = products.reduce((acc, el) => (acc += Number(el.quantity) * Number(el.price.slice(1))), 0).toFixed(2);
     const taxes = 3.6;
 
-    const totalPriceMarkup = `
-      <div class="chekout__subtotal">
-        <div><span>Subtotal</span><span class="chekout__subtotal-price">$${totalPrice}</span></div>
-        <div><span>Shipping</span><span class="chekout__subtotal-price">Calculated at next step</span></div>
-        <div><span>Taxes</span><span class="chekout__subtotal-price">$${taxes}0</span></div>
-      </div>
-      <div class="chekout__total">
-        <span>Total</span>
-        <div><span class="chekout__currency">USD</span><span class="chekout__total-price">$${(
-          Number(totalPrice) + Number(taxes)
-        ).toFixed(2)}</span></div>
-      </div>
-    `;
+    const totalPriceElement = document.importNode(templateTotal, true);
 
-    return { list, totalPriceMarkup };
+    totalPriceElement.getElementById('subtotalPrice').textContent = `$${totalPrice}`;
+    totalPriceElement.getElementById('taxes').textContent = `$${taxes}`;
+    totalPriceElement.getElementById('totalPrice').textContent = `$${(Number(totalPrice) + Number(taxes)).toFixed(2)}`;
+
+    return { list, totalPriceElement };
   }
 })();
 
