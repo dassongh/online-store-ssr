@@ -1,5 +1,5 @@
-import { countTotal } from '../addingToCart';
-import setCartIndicator from '../cartIndicator';
+import { countTotal } from './addingToCart';
+import setCartIndicator from './cartIndicator';
 
 const refs = {
   container: document.querySelector('.shop-cart__list'),

@@ -17,6 +17,25 @@
   </button>
 </template>
 
+<template id="wishListItem">
+  <div class="shop-cart__info">
+    <div class="shop-cart__imgThumb">
+      <a href="">
+        <img src="" />
+      </a>
+    </div>
+    <div >
+      <p class="shop-cart__name"></p>
+      <div>
+        <span class="shop-cart__price"></span>
+      </div>
+    </div>
+  </div>
+  <button class="shop-cart__btn-delete" id="deleteBtn">
+    {{> deleteBtnIcon }}
+  </button>
+</template>
+
 <template id="product">
   <li class="product-list__item" data-id="">
     <div class="thumb">

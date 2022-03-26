@@ -1,4 +1,4 @@
-import { BASE_URL } from '../constants';
+import { BASE_URL } from '../other/constants';
 import { renderProductItem } from './paginationPLP';
 import { addItemToCart } from './paginationPLP';
 

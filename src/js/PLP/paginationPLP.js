@@ -1,6 +1,6 @@
-import { BASE_URL } from '../constants';
-import { countTotal } from '../addingToCart';
-import setCartIndicator from '../cartIndicator';
+import { BASE_URL } from '../other/constants';
+import { countTotal } from '../sideShopCart/addingToCart';
+import setCartIndicator from '../sideShopCart/cartIndicator';
 
 (function () {
   const refs = {
