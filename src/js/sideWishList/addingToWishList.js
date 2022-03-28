@@ -35,7 +35,7 @@ if (refs.productsList && refs.weekDealsList && refs.featureList) {
   setWishListIndicator();
 }
 
-function addItemToWishList(...productLists) {
+export function addItemToWishList(...productLists) {
   refs.container.innerHTML = '';
 
   let products = null;

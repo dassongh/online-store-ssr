@@ -20,6 +20,8 @@ import './js/sideShopCart/cartIndicator';
 import './js/sideWishList/wishList';
 import './js/sideWishList/addingToWishList';
 import './js/sideWishList/wishListIndicator';
+import './js/PDP/addingToWishListPDP';
+import './js/Wishlist/renderWishlist';
 
 import './styles/main.scss';
 import './styles/owlCarousel/owl.carousel.min.css';

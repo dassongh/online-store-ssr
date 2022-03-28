@@ -13,6 +13,7 @@ hbs.registerPartials(__dirname + '/views/partials/PLP');
 hbs.registerPartials(__dirname + '/views/partials/Cart');
 hbs.registerPartials(__dirname + '/views/partials/Chekout');
 hbs.registerPartials(__dirname + '/views/partials/Contact');
+hbs.registerPartials(__dirname + '/views/partials/Wishlist');
 
 hbs.registerHelper('isFiveStar', value => value === 5);
 hbs.registerHelper('isFourStar', value => value === 4);

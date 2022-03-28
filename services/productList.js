@@ -1,4 +1,5 @@
 const express = require('express');
+const async = require('hbs/lib/async');
 const router = express.Router();
 
 const productListHelper = require('../core/productListHelper');
@@ -83,6 +84,21 @@ router.post('/products/', async (req, res) => {
   const indexToStart = (page - 1) * 15;
   productListHelper.sortBy(productsTotal, sort);
   const products = [...productsTotal.slice(indexToStart, indexToStart + 15)];
+
+  res.json(products);
+});
+
+//wishlist page
+router.get('/wishlist', (req, res) => {
+  res.render('Wishlist', {
+    shopPage: true,
+    categoryName: 'Wishlist',
+  });
+});
+
+router.post('/wishlist', async (req, res) => {
+  const wishlistIds = req.body;
+  const products = await productListHelper.returnProductsById(wishlistIds);
 
   res.json(products);
 });

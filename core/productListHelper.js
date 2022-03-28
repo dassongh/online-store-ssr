@@ -48,6 +48,21 @@ const returnFeatureProducts = async () => {
   });
 };
 
+const returnProductsById = async ids => {
+  const products = [];
+
+  for (const id of ids) {
+    const product = await prisma.products.findUnique({
+      where: {
+        id: Number(id),
+      },
+    });
+    products.push(product);
+  }
+
+  return products;
+};
+
 const sortBy = (products, method) => {
   switch (method) {
     case 'default':
@@ -105,4 +120,5 @@ module.exports = {
   sortBy,
   getPages,
   returnCategoryName,
+  returnProductsById,
 };
