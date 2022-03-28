@@ -1,0 +1,112 @@
+<section class="product-list">
+      <div class="product-list__main">
+        <div class="container">
+          <div class="product-list__main__header">
+            <p class="product-list__main__text">
+              Showing <span>{{ quantity.returned }}</span> of <span>{{ quantity.total }}</span> results
+            </p>
+            <div>
+              <button class="product-list__btn product-list__btn--active">
+                {{> cartViewIcon }}
+              </button>
+              <button class="product-list__btn">
+                {{> listViewIcon }}
+              </button>
+              <select class="product-list__select">
+                <option value="default">Default sorting</option>
+                <option value="raiting">By raiting</option>
+                <option value="price">By price</option>
+                <option value="name">By name</option>
+              </select>
+            </div>
+          </div>
+          <div class="product-list__container">
+            <ul class="product-list__list">
+
+              {{#each products}}
+              <li class="product-list__item">
+                <div class="thumb product-list__thumb" data-id="{{ id }}">
+                    <img src="{{ image_url }}" alt="{{ category }}" data-image="{{ id }}">
+
+                    {{#if (isSaleAndNew old_price isNew)}}
+                    <div class="thumb__discount thumb__discount--both"><span class="thumb__discount-number">-20%</span></div>
+                    <div class="thumb__discount thumb__discount--both-new"><span class="thumb__discount-number">new</span></div>
+
+                    {{else}}
+
+                    {{#if old_price}}
+                    <div class="thumb__discount"><span class="thumb__discount-number">-20%</span></div>
+                    {{/if}}
+
+                    {{#if isNew}}
+                    <div class="thumb__discount thumb__discount--sale"><span class="thumb__discount-number">new</span></div>
+                    {{/if}}
+
+                    {{/if}}
+
+                    <button class="thumb__like-btn" data-like="{{ id }}">
+                      {{> likeBtnIcon }}
+                    </button>
+                    <ul class="thumb__buttons-list">
+                      <li class="thumb__button-item">
+                        <button class="thumb__button">
+                          {{> refreshBtnIcon }}
+                        </button>
+                      </li>
+                      <li class="thumb__button-item">
+                        <button class="thumb__button-add-to-card" data-add="{{ id }}">
+                          {{> smallCartIcon }}
+                          Add to cart
+                        </button>
+                      </li>
+                      <li class="thumb__button-item">
+                        <a href="/product/:{{ id }}" class="thumb__button">
+                          {{> smallSearchIcon }}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="raiting">
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+
+                    {{#if (isThreeStar raiting)}}
+                    <div class="clip-star clip-star--empty"></div>
+                    <div class="clip-star clip-star--empty"></div>
+                    {{/if}}
+
+                    {{#if (isFourStar raiting)}}
+                    <div class="clip-star"></div>
+                    <div class="clip-star clip-star--empty"></div>
+                    {{/if}}
+
+                    {{#if (isFiveStar raiting)}}
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    {{/if}}
+
+                  </div>
+                  <p class="card-item__text" data-title="{{ id }}">{{ title }}</p>
+                  <p class="card-item__price" data-price="{{ id }}">{{ price }}
+
+                  {{#if old_price}}
+                  <span class="card-item__price card-item__old-price">{{ old_price }}</span>
+                  {{/if}}
+
+                  </p>
+              </li>
+              {{/each}}
+
+            </ul>
+      </div>
+      <ul class="product-list__pagination">
+
+        {{#each pageArr}}
+        <li class="product-list__pagination-item"><button class="pagination" data-page="{{ this }}">{{ this }}</button></li>
+        {{/each}}
+
+      </ul>
+    </div>
+  </div>
+</section>

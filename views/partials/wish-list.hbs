@@ -1,0 +1,35 @@
+<div class="wish-list__overlay wish-list__overlay--is-hidden">
+  <div class="wish-list">
+    <div>
+      <div class="shop-cart__header">
+        <p class="shop-cart__heading">Wishlist</p>
+        <ul class="header__icons">
+          <li class="header__icons-item">
+            <a href="">
+              {{> bigSearchIcon }}
+            </a>
+          </li>
+          <li class="header__icons-item">
+            <a href="/wishlist">
+              {{> heartIcon }}
+            </a>
+          </li>
+          <li class="header__icons-item">
+            <a href="/order/cart">
+              {{> bigCartIcon }}
+            </a>
+          </li>
+        </ul>
+        <button class="wish-list__btn">Close</button>
+      </div>
+
+      <div class="shop-cart__main">
+        <ul class="shop-cart__list" id="wishListContainer"></ul>
+      </div>
+    </div>
+
+    <div class="shop-cart__footer">
+      <a class="shop-cart__footerBtn" href="/order/cart">View wish list</a>
+    </div>
+  </div>
+</div>

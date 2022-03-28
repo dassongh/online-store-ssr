@@ -1,4 +1,4 @@
-import { BASE_URL } from '../constants';
+import { BASE_URL } from '../other/constants';
 import { renderProductItem } from './paginationPLP';
 import { addItemToCart } from './paginationPLP';
 
@@ -31,8 +31,8 @@ import { addItemToCart } from './paginationPLP';
         params.set('_sort_', sort);
         window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
 
-        const markup = res.map(el => renderProductItem(el)).join('');
-        refs.list.innerHTML = markup;
+        refs.list.innerHTML = '';
+        res.forEach(el => refs.list.appendChild(renderProductItem(el)));
 
         addItemToCart();
       });

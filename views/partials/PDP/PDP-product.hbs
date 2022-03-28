@@ -1,0 +1,103 @@
+<section class="product"> 
+  <div class="container product__container">
+    <div class="product__images">
+      <div class="product__image" >
+        <img
+          src="{{ product.image_url }}"
+          alt="{{ product.title }}"
+          data-image="{{ product.id }}"
+        />
+
+        {{#if (isSaleAndNew product.old_price product.isNew)}}
+        <div class="thumb__discount thumb__discount--both"><span class="thumb__discount-number">-20%</span></div>
+        <div class="thumb__discount thumb__discount--both-new"><span class="thumb__discount-number">new</span></div>
+
+        {{else}}
+
+        {{#if product.old_price}}
+        <div class="thumb__discount" ><span class="thumb__discount-number">-20%</span></div>
+        {{/if}}
+
+        {{#if product.isNew}}
+        <div class="thumb__discount thumb__discount--sale"><span class="thumb__discount-number">new</span></div>
+        {{/if}}
+
+        {{/if}}
+
+      </div>
+    </div>
+
+    <div class="product__info">
+      <div class="product__info-top">
+        <h1 class="product__heading" data-title="{{ product.id }}">{{ product.title }}</h1>
+        <div>
+          <div class="clip-star"></div>
+              <div class="clip-star"></div>
+              <div class="clip-star"></div>
+
+              {{#if (isThreeStar product.raiting)}}
+              <div class="clip-star clip-star--empty"></div>
+              <div class="clip-star clip-star--empty"></div>
+              {{/if}}
+
+              {{#if (isFourStar product.raiting)}}
+              <div class="clip-star"></div>
+              <div class="clip-star clip-star--empty"></div>
+              {{/if}}
+
+              {{#if (isFiveStar product.raiting)}}
+              <div class="clip-star"></div>
+              <div class="clip-star"></div>
+              {{/if}}
+        </div>
+        <p class="product__price" data-price="{{ product.id }}">{{ product.price }}</p>
+        {{#if product.old_price}}
+        <span class="card-item__price card-item__old-price">{{ product.old_price }}</span>
+        {{/if}}
+      </div>
+
+      <div class="product__info-main">
+        <p class="product__info-text">{{ product.description }}</p>
+        <p class="product__info-text">Category: {{ product.category }}</p>
+        <div class="product__info-action">
+          <p class="product__info-text product__info-text--last">Quantity:</p>
+          <div class="product__info-quantity">
+            <button class="product__info-quantityBtn" data-minus="{{ product.id }}">
+              {{> arrowLeftIcon }}
+            </button>
+            <span class="product__info-quantityText" data-quantity>0</span>
+            <button class="product__info-quantityBtn" data-plus="{{ product.id }}">
+              {{> arrowRightIcon }}
+            </button>
+          </div>
+          <button class="product__info-addBtn" data-add="{{ product.id }}">add to cart</button>
+          <button class="product__info-secBtn" data-like="{{ product.id }}">
+            {{> bigHeartIcon }}
+          </button>
+          <button class="product__info-secBtn product__info-secBtn--last">
+            {{> bigRefreshIcon }}
+          </button>
+        </div>
+      </div>
+
+      <div class="product__info-bottom">
+        <ul class="product__info-optionList">
+          <li class="product__info-optionItem">
+            <button class="product__info-optionBtn product__info-optionBtn--active" data-info="1">Description</button>
+          </li>
+          <li class="product__info-optionItem">
+            <button class="product__info-optionBtn" data-info="2">Additional information</button>
+          </li>
+          <li class="product__info-optionItem">
+            <button class="product__info-optionBtn" data-info="3">Reviews</button>
+          </li>
+        </ul>
+        <div class="product__info-desc">
+          <p class="product__info-descText" data-info="1">{{ product.additionalDescription }}</p>
+          <p class="product__info-descText product__info-descText--hidden product__info-descText--additional" data-info="2">{{ product.additionalInfo }}</p>
+          <p class="product__info-descText product__info-descText--hidden product__info-descText--additional" data-info="3">No reviews yet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

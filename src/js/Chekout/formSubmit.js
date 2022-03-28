@@ -1,5 +1,5 @@
 import { renderParagraph } from './renderProducts';
-import { BASE_URL } from '../constants';
+import { BASE_URL } from '../other/constants';
 
 (function () {
   const formRef = document.querySelector('.form');

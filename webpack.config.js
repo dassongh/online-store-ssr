@@ -36,34 +36,6 @@ module.exports = {
         collapseWhitespace: !isDev,
       },
     }),
-    // new HTMLWebpackPlugin({
-    //   filename: 'PLP.html',
-    //   template: './PLP.html',
-    //   minify: {
-    //     collapseWhitespace: !isDev,
-    //   },
-    // }),
-    // new HTMLWebpackPlugin({
-    //   filename: 'PDP.html',
-    //   template: './PDP.html',
-    //   minify: {
-    //     collapseWhitespace: !isDev,
-    //   },
-    // }),
-    // new HTMLWebpackPlugin({
-    //   filename: 'Cart.html',
-    //   template: './Cart.html',
-    //   minify: {
-    //     collapseWhitespace: !isDev,
-    //   },
-    // }),
-    // new HTMLWebpackPlugin({
-    //   filename: 'Chekout.html',
-    //   template: './Chekout.html',
-    //   minify: {
-    //     collapseWhitespace: !isDev,
-    //   },
-    // }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
@@ -108,11 +80,6 @@ module.exports = {
             presets: ['@babel/preset-env'],
           },
         },
-      },
-      {
-        test: /\.hbs/,
-        loader: 'handlebars-loader',
-        exclude: /node_modules/,
       },
     ],
   },

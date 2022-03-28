@@ -1,5 +1,5 @@
-import { addItemToCart } from '../addingToCart';
-import { countTotal } from '../addingToCart';
+import { addItemToCart } from '../sideShopCart/addingToCart';
+import { countTotal } from '../sideShopCart/addingToCart';
 
 const refs = {
   title: document.querySelectorAll('[data-title]'),
