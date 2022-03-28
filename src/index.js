@@ -22,6 +22,7 @@ import './js/sideWishList/addingToWishList';
 import './js/sideWishList/wishListIndicator';
 import './js/PDP/addingToWishListPDP';
 import './js/Wishlist/renderWishlist';
+import './js/Search/formSubmit';
 
 import './styles/main.scss';
 import './styles/owlCarousel/owl.carousel.min.css';

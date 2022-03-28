@@ -63,6 +63,16 @@ const returnProductsById = async ids => {
   return products;
 };
 
+const returnProductsByQuery = async query => {
+  return await prisma.products.findMany({
+    where: {
+      title: {
+        contains: query,
+      },
+    },
+  });
+};
+
 const sortBy = (products, method) => {
   switch (method) {
     case 'default':
@@ -121,4 +131,5 @@ module.exports = {
   getPages,
   returnCategoryName,
   returnProductsById,
+  returnProductsByQuery,
 };

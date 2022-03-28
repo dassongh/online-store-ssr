@@ -8,12 +8,6 @@ const port = process.env.PORT || 3000;
 const hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerPartials(__dirname + '/views/partials/svg');
-hbs.registerPartials(__dirname + '/views/partials/PDP');
-hbs.registerPartials(__dirname + '/views/partials/PLP');
-hbs.registerPartials(__dirname + '/views/partials/Cart');
-hbs.registerPartials(__dirname + '/views/partials/Chekout');
-hbs.registerPartials(__dirname + '/views/partials/Contact');
-hbs.registerPartials(__dirname + '/views/partials/Wishlist');
 
 hbs.registerHelper('isFiveStar', value => value === 5);
 hbs.registerHelper('isFourStar', value => value === 4);
