@@ -55,4 +55,11 @@ router.patch('/', (req, res) => {
   res.send(`Updated product with id: ${productId}`);
 });
 
+router.delete('/', async (req, res) => {
+  const { id } = req.body;
+  const deletedProduct = await productHelper.deleteProduct(id);
+
+  res.json(deletedProduct);
+});
+
 module.exports = router;
