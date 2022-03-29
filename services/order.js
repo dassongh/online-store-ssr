@@ -19,6 +19,21 @@ router.get('/chekout', (req, res) => {
   });
 });
 
+router.get('/:id', async (req, res) => {
+  const id = req.params.id.slice(1);
+  const order = await orderHelper.returnOrder(id);
+  const products = await orderHelper.returnOrderProducts(id);
+
+  res.json({ order, products });
+});
+
+router.patch('/', async (req, res) => {
+  const { id, status } = req.body;
+
+  orderHelper.updateStatus(id, status);
+  res.send(`Updated status order with id: ${id}`);
+});
+
 router.post(
   '/chekout',
   [

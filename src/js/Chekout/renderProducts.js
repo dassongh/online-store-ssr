@@ -8,13 +8,13 @@
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 
   if (!productCart) {
-    renderParagraph(chekoutTotalsRef);
+    renderParagraph(chekoutTotalsRef, 'Cart is empty');
   } else if (productCart.length > 0) {
     const { list, totalPriceElement } = renderProducts(productCart);
     chekoutTotalsRef.appendChild(list);
     chekoutTotalsRef.appendChild(totalPriceElement);
   } else {
-    renderParagraph(chekoutTotalsRef);
+    renderParagraph(chekoutTotalsRef, 'Cart is empty');
   }
 
   function renderProducts(products) {
@@ -47,6 +47,6 @@
   }
 })();
 
-export function renderParagraph(ref) {
-  ref.innerHTML = '<p class="chekout__paragraph">Cart is empty</p>';
+export function renderParagraph(ref, value) {
+  ref.innerHTML = `<p class="chekout__paragraph">${value}</p>`;
 }

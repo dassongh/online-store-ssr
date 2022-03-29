@@ -8,6 +8,8 @@
   const templateTableRow = document.getElementById('tableRow').content;
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 
+  if (!productCart) return renderParagraph();
+
   if (productCart.length > 0) {
     tableContainerRef.prepend(renderTable(productCart));
     addClickHanlders();

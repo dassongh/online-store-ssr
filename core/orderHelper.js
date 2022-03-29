@@ -16,7 +16,37 @@ const postOrderProducts = async (productsData, id) => {
   });
 };
 
+const returnOrder = async id => {
+  return await prisma.orders.findUnique({
+    where: {
+      id,
+    },
+  });
+};
+
+const returnOrderProducts = async id => {
+  return await prisma.order_products.findMany({
+    where: {
+      orderId: id,
+    },
+  });
+};
+
+const updateStatus = async (id, status) => {
+  return await prisma.orders.update({
+    where: {
+      id,
+    },
+    data: {
+      status,
+    },
+  });
+};
+
 module.exports = {
   postOrder,
   postOrderProducts,
+  returnOrder,
+  returnOrderProducts,
+  updateStatus,
 };

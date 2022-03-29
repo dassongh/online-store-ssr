@@ -51,7 +51,7 @@ import { BASE_URL } from '../other/constants';
       .then(res => {
         formRef.reset();
         localStorage.removeItem('productCart');
-        renderParagraph(chekoutTotalsRef);
+        renderParagraph(chekoutTotalsRef, 'Thank you for your order!');
         shopCartListRef.innerHTML = '';
         cartIndicatorRef.classList.add('cart-indicator--hidden');
         console.log('Success', res);
