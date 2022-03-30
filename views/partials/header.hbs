@@ -37,7 +37,8 @@
       </div>
 
       <div id="header" class="container header__container-drop-down header__container-mobile not-visible" data-menu>
-        <div class="header__main">
+        <div class="header__wrapper">
+          <div class="header__main">
           <button class="btn-open btn-open--close" data-close>
             {{> closeBtnIcon }}
           </button>
@@ -81,9 +82,9 @@
           </ul>
 
           {{#if shopPage }}
-          <h2 class="logo"><span class="logo--secondary">Orga</span>Fresh</h2>
+          <h2 class="logo"><a href="/"><span class="logo--secondary">Orga</span>Fresh</a></h2>
           {{else}}
-          <h2 class="logo">OrgaFresh</h2>
+          <h2 class="logo"><a href="/">OrgaFresh</a></h2>
           {{/if}}
 
           <ul class="header__icons">
@@ -105,6 +106,7 @@
               </a>
             </li>
           </ul>
+        </div>
         </div>
 
         <div class="drop-down drop-down--non-visible" data-dropDown>
@@ -134,7 +136,7 @@
 
       <div class="container header__container">
         <div class="header__main-mobile">
-          <h2 class="logo header__logo">OrgaFresh</h2>
+          <h2 class="logo header__logo"><a href="/"><span class="logo--secondary">Orga</span>Fresh</a></h2>
           <button class="btn-open" data-open>
             {{> burgerIcon }}
           </button>

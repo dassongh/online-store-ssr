@@ -38,7 +38,7 @@
 
 <template id="product">
   <li class="product-list__item" data-id="">
-    <div class="thumb">
+    <div class="thumb product-list__thumb">
       <img src="" alt="" data-image="">
       <button class="thumb__like-btn" data-like="">
         {{> likeBtnIcon }}
@@ -127,11 +127,11 @@
     </td>
     <td>
       <div class="product__info-quantity table__quantity">
-        <button class="product__info-quantityBtn" data-minus="">
+        <button class="product__info-quantityBtn table__btn" data-minus="">
           {{> arrowLeftIcon }}
         </button>
         <span class="product__info-quantityText" data-quantity=""></span>
-        <button class="product__info-quantityBtn" data-plus="">
+        <button class="product__info-quantityBtn table__btn" data-plus="">
           {{> arrowRightIcon }}
         </button>
       </div>

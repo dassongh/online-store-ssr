@@ -12,7 +12,6 @@
   margin: 0;
 
   @media screen and (max-width: 767px) {
-    flex-direction: column;
     width: auto;
     height: auto;
   }
@@ -21,6 +20,10 @@
 .table__section {
   padding-top: 40px;
   padding-bottom: 90px;
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 40px;
+  }
 }
 
 .table {
@@ -28,7 +31,7 @@
   border-spacing: 0px 40px;
 
   @media screen and (max-width: 767px) {
-    border-spacing: 0;
+    border-spacing: 0 20px;
   }
 
   & th {
@@ -66,6 +69,7 @@
 
       @media screen and (max-width: 767px) {
         flex-direction: column;
+        align-items: flex-start;
       }
     }
 
@@ -73,6 +77,10 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+
+      @media screen and (max-width: 767px) {
+        align-items: center;
+      }
     }
   }
 }
@@ -99,7 +107,7 @@
   color: #333333;
 
   @media screen and (max-width: 767px) {
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 
@@ -109,7 +117,13 @@
   color: #000000;
 
   @media screen and (max-width: 767px) {
-    font-size: 14px;
+    font-size: 12px;
+  }
+}
+
+.table__btn {
+  @media screen and (max-width: 767px) {
+    padding: 10px 10px 4px;
   }
 }
 
@@ -139,6 +153,10 @@
   &:hover {
     background-color: #60a00c;
     color: white;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
   }
 }
 

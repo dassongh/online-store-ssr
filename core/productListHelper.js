@@ -1,4 +1,6 @@
 const { PrismaClient } = require('@prisma/client');
+const categoryConfig = require('./categoryConfig');
+
 const prisma = new PrismaClient();
 
 const getAllProducts = async () => await prisma.products.findMany();
@@ -104,22 +106,7 @@ const getPages = products => {
   return pageArr;
 };
 
-const returnCategoryName = category => {
-  switch (category) {
-    case 'all':
-      return 'All products';
-    case 'meats':
-      return 'Fresh meats';
-    case 'fruits':
-      return 'Fresh fruits';
-    case 'vegetables':
-      return 'Fresh vegetables';
-    case 'grainAndNuts':
-      return 'Grain & Nuts';
-    case 'smoothies':
-      return 'Smoothies';
-  }
-};
+const returnCategoryName = category => categoryConfig[category];
 
 module.exports = {
   getAllProducts,

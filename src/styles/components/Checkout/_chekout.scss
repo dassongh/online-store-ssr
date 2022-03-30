@@ -25,6 +25,7 @@
 
   @media screen and (max-width: 767px) {
     padding-right: 0;
+    border-right: none;
   }
 }
 
@@ -271,6 +272,10 @@
   font-size: 15px;
   line-height: 2.13;
   color: #333333;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
 }
 
 .chekout__currency {
