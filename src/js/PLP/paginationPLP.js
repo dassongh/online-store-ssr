@@ -1,5 +1,6 @@
 import { BASE_URL } from '../other/constants';
 import { countTotal } from '../sideShopCart/addingToCart';
+import { renderListProductItem } from './changeViewPLP';
 import setCartIndicator from '../sideShopCart/cartIndicator';
 import setWishListIndicator from '../sideWishList/wishListIndicator';
 
@@ -21,11 +22,9 @@ import setWishListIndicator from '../sideWishList/wishListIndicator';
       const page = el.dataset.page;
       el.classList.add('pagination--active');
 
-      const params = new Proxy(new URLSearchParams(window.location.search), {
-        get: (searchParams, prop) => searchParams.get(prop),
-      });
-      const sort = params._sort_;
-      const category = params.category;
+      const params = new URLSearchParams(window.location.search);
+      const sort = params.get('_sort_');
+      const category = params.get('category');
 
       fetch(`${BASE_URL}/products/?category=${category}&page=${page}&_sort_=${sort !== 'default' ? sort : 'default'}`, {
         method: 'POST',
@@ -35,12 +34,16 @@ import setWishListIndicator from '../sideWishList/wishListIndicator';
       })
         .then(res => res.json())
         .then(res => {
-          const params = new URLSearchParams(window.location.search);
           params.set('page', page);
           window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
 
+          let view = params.get('view');
+          if (!view) view = 'card';
+
           refs.list.innerHTML = '';
-          res.forEach(el => refs.list.appendChild(renderProductItem(el)));
+
+          if (view === 'card') res.forEach(el => refs.list.appendChild(renderProductItem(el)));
+          if (view === 'list') res.forEach(el => refs.list.appendChild(renderListProductItem(el)));
 
           addItemToCart();
           addItemToWishList();
@@ -208,7 +211,7 @@ export function addItemToCart() {
   }
 }
 
-function addItemToWishList() {
+export function addItemToWishList() {
   const addToWishListRefs = {
     title: document.querySelectorAll('[data-title]'),
     price: document.querySelectorAll('[data-price]'),

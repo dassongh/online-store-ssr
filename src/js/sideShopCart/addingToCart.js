@@ -9,16 +9,12 @@ const refs = {
   productsList: document.querySelector('.collection__choice-main'),
   weekDealsList: document.querySelector('.weekDeals__main-list'),
   featureList: document.querySelector('.feature-list'),
-  productsListPLP: document.querySelector('.product-list__list'),
   contactPage: document.querySelector('.contact'),
 };
 const template = document.getElementById('shopCartItem').content;
 
 if (refs.productsList && refs.weekDealsList && refs.featureList) {
   addItemToCart(refs.productsList, refs.weekDealsList, refs.featureList);
-  setCartIndicator();
-} else if (refs.productsListPLP) {
-  addItemToCart(refs.productsListPLP);
   setCartIndicator();
 } else if (refs.productsList) {
   addItemToCart(refs.productsList);

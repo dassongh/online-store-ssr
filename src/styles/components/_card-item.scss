@@ -48,6 +48,10 @@
   &--both {
     left: 62%;
 
+    &--list {
+      left: 72%;
+    }
+
     @media screen and (max-width: 767px) {
       left: 66%;
     }
@@ -56,6 +60,10 @@
   &--both-new {
     left: 38%;
     background-color: #3d93e2;
+
+    &--list {
+      left: 28%;
+    }
 
     @media screen and (max-width: 767px) {
       left: 34%;
@@ -118,6 +126,13 @@
   @media screen and (max-width: 767px) {
     opacity: 1;
   }
+
+  &--list {
+    opacity: 1;
+    position: static;
+    width: 45px;
+    height: 45px;
+  }
 }
 
 .thumb__like-btn path {
@@ -158,6 +173,11 @@
     height: 25px;
     width: 25px;
   }
+
+  &--list {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 .thumb__button-add-to-card {
@@ -193,6 +213,12 @@
     height: 25px;
     margin: 0;
   }
+
+  &--list {
+    width: 138px;
+    height: 45px;
+    margin: 0;
+  }
 }
 
 .card-item__text {
@@ -207,6 +233,11 @@
   @media screen and (max-width: 767px) {
     width: 130px;
   }
+
+  &--list {
+    font-size: 17px;
+    margin-left: 20px;
+  }
 }
 
 .card-item__price {
@@ -216,6 +247,11 @@
 
   @media screen and (max-width: 1023px) {
     font-size: 15px;
+  }
+
+  &--list {
+    font-size: 20px;
+    margin-left: 50px;
   }
 }
 
