@@ -1,5 +1,9 @@
 .whyUs {
   padding: 325px 0 130px;
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 60px;
+  }
 }
 
 .whyUs__heading {
@@ -19,12 +23,12 @@
   }
 
   @media screen and (max-width: 1023px) {
-    margin-right: 5px;
+    margin-right: 15px;
     margin-left: 0;
 
     &--last {
       margin-right: 0;
-      margin-left: 5px;
+      margin-left: 15px;
     }
   }
 }
