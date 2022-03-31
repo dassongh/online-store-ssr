@@ -23,6 +23,11 @@
       outline: 1px solid #60a00c;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    width: auto;
+    flex-direction: column;
+  }
 }
 
 .search__btn {

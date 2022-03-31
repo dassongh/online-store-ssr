@@ -1,15 +1,15 @@
 <section class="product-list">
       <div class="product-list__main">
-        <div class="container">
+        <div class="container" >
           <div class="product-list__main__header">
             <p class="product-list__main__text">
               Showing <span>{{ quantity.returned }}</span> of <span>{{ quantity.total }}</span> results
             </p>
             <div>
-              <button class="product-list__btn product-list__btn--active">
+              <button class="product-list__btn product-list__btn--active" data-card>
                 {{> cartViewIcon }}
               </button>
-              <button class="product-list__btn">
+              <button class="product-list__btn" data-list>
                 {{> listViewIcon }}
               </button>
               <select class="product-list__select">
@@ -103,7 +103,7 @@
       <ul class="product-list__pagination">
 
         {{#each pageArr}}
-        <li class="product-list__pagination-item"><button class="pagination" data-page="{{ this }}">{{ this }}</button></li>
+        <li class="product-list__pagination-item"><a href="#list" class="pagination" data-page="{{ this }}">{{ this }}</a></li>
         {{/each}}
 
       </ul>

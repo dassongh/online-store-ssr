@@ -9,11 +9,13 @@ router.get('/:id', async (req, res) => {
   const productId = req.params.id.slice(1);
   const product = await productHelper.getProductById(Number(productId));
   const category = product.category;
+  const productCategory = productListHelper.returnCategoryName(category);
   const products = await productListHelper.returnCategory(category);
 
   res.render('PDP', {
     shopPage: true,
     categoryName: 'Product Details',
+    productCategory,
     product,
     products,
   });

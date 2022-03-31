@@ -8,7 +8,6 @@ const refs = {
   productsList: document.querySelector('.collection__choice-main'),
   weekDealsList: document.querySelector('.weekDeals__main-list'),
   featureList: document.querySelector('.feature-list'),
-  productsListPLP: document.querySelector('.product-list__list'),
   contactPage: document.querySelector('.contact'),
   tableContainer: document.querySelector('.table__container'),
   chekoutProducts: document.querySelector('.chekout__totals'),
@@ -17,9 +16,6 @@ const template = document.getElementById('wishListItem').content;
 
 if (refs.productsList && refs.weekDealsList && refs.featureList) {
   addItemToWishList(refs.productsList, refs.weekDealsList, refs.featureList);
-  setWishListIndicator();
-} else if (refs.productsListPLP) {
-  addItemToWishList(refs.productsListPLP);
   setWishListIndicator();
 } else if (refs.productsList) {
   addItemToWishList(refs.productsList);
