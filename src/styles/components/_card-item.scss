@@ -132,6 +132,11 @@
     position: static;
     width: 45px;
     height: 45px;
+
+    @media screen and (max-width: 767px) {
+      height: 25px;
+      width: 25px;
+    }
   }
 }
 
@@ -177,6 +182,11 @@
   &--list {
     width: 45px;
     height: 45px;
+
+    @media screen and (max-width: 767px) {
+      height: 25px;
+      width: 25px;
+    }
   }
 }
 
@@ -218,6 +228,12 @@
     width: 138px;
     height: 45px;
     margin: 0;
+
+    @media screen and (max-width: 767px) {
+      width: 98px;
+      height: 25px;
+      margin: 0;
+    }
   }
 }
 
@@ -237,6 +253,12 @@
   &--list {
     font-size: 17px;
     margin-left: 20px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 13px;
+      width: 60px;
+      margin-left: 0;
+    }
   }
 }
 
@@ -252,6 +274,11 @@
   &--list {
     font-size: 20px;
     margin-left: 50px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 13px;
+      margin-left: 0;
+    }
   }
 }
 

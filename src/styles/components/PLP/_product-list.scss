@@ -147,6 +147,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 25px;
+
+    @media screen and (max-width: 767px) {
+      padding: 0;
+    }
   }
 }
 
@@ -158,6 +162,10 @@
   &--list {
     width: 150px;
     position: relative;
+
+    @media screen and (max-width: 767px) {
+      width: 80px;
+    }
   }
 }
 
@@ -167,6 +175,11 @@
 
   &--last {
     width: 450px;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      width: auto;
+    }
   }
 }
 
@@ -209,6 +222,10 @@
 
 .buttons-list__list {
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
 }
 
 html {
