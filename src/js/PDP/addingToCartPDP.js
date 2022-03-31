@@ -1,5 +1,5 @@
-import { addItemToCart } from '../addingToCart';
-import { countTotal } from '../addingToCart';
+import { addItemToCart } from '../sideShopCart/addingToCart';
+import { countTotal } from '../sideShopCart/addingToCart';
 
 const refs = {
   title: document.querySelectorAll('[data-title]'),
@@ -67,6 +67,8 @@ if (refs.plusButton) {
 function renderQuantity() {
   const productCart = JSON.parse(localStorage.getItem('productCart'));
 
+  if (!productCart) return;
+
   if (productCart.length > 0) {
     const quantity = productCart.find(el => el.id === refs.plusButton.dataset.plus)?.quantity;
 
@@ -77,6 +79,8 @@ function renderQuantity() {
 function renderCartQuantity() {
   const quantityRef = document.querySelector(`[data-quantity="${refs.plusButton.dataset.plus}"]`);
   const productCart = JSON.parse(localStorage.getItem('productCart'));
+
+  if (!productCart) return;
 
   const quantity = productCart.find(el => el.id === refs.plusButton.dataset.plus)?.quantity;
 

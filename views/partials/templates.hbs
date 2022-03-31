@@ -1,0 +1,148 @@
+<template id="shopCartItem">
+  <div class="shop-cart__info">
+    <div class="shop-cart__imgThumb">
+      <a href="">
+        <img src="" />
+      </a>
+    </div>
+    <div >
+      <p class="shop-cart__name"></p>
+      <div>
+        <span class="shop-cart__quantity" data-quantity=""></span><span class="shop-cart__quantity">x</span><span class="shop-cart__price"></span>
+      </div>
+    </div>
+  </div>
+  <button class="shop-cart__btn-delete">
+    {{> deleteBtnIcon }}
+  </button>
+</template>
+
+<template id="wishListItem">
+  <div class="shop-cart__info">
+    <div class="shop-cart__imgThumb">
+      <a href="">
+        <img src="" />
+      </a>
+    </div>
+    <div >
+      <p class="shop-cart__name"></p>
+      <div>
+        <span class="shop-cart__price"></span>
+      </div>
+    </div>
+  </div>
+  <button class="shop-cart__btn-delete" id="deleteBtn">
+    {{> deleteBtnIcon }}
+  </button>
+</template>
+
+<template id="product">
+  <li class="product-list__item" data-id="">
+    <div class="thumb product-list__thumb">
+      <img src="" alt="" data-image="">
+      <button class="thumb__like-btn" data-like="">
+        {{> likeBtnIcon }}
+      </button>
+      <ul class="thumb__buttons-list">
+        <li class="thumb__button-item">
+          <button class="thumb__button">
+            {{> refreshBtnIcon }}
+          </button>
+        </li>
+        <li class="thumb__button-item">
+          <button class="thumb__button-add-to-card" data-add="">
+            {{> smallCartIcon }}
+            Add to cart
+          </button>
+        </li>
+        <li class="thumb__button-item">
+          <a href="" class="thumb__button">
+            {{> smallSearchIcon }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="raiting">
+    </div>
+    <p class="card-item__text" data-title=""></p>
+    <p class="card-item__price" data-price="">
+    </p>
+  </li>
+</template>
+
+<template id="chekoutProduct">
+  <li data-id="">
+    <div class="chekout__info">
+      <div>
+        <div class="shop-cart__imgThumb">
+          <a href="">
+            <img src="" />
+          </a>
+        </div>
+        <span class="chekout__quantity"></span><span class="chekout__quantity">x</span>
+        <p class="chekout__name"></p>
+      </div>
+      <span class="chekout__price"></span>
+    </div>
+  </li>
+</template>
+
+<template id="chekoutTotal">
+  <div class="chekout__subtotal">
+    <div><span>Subtotal</span><span class="chekout__subtotal-price" id="subtotalPrice"></span></div>
+    <div><span>Shipping</span><span class="chekout__subtotal-price">Calculated at next step</span></div>
+    <div><span>Taxes</span><span class="chekout__subtotal-price" id="taxes"></span></div>
+  </div>
+  <div class="chekout__total">
+    <span>Total</span>
+    <div><span class="chekout__currency">USD</span><span class="chekout__total-price" id="totalPrice"></span></div>
+  </div>
+</template>
+
+<template id="tableHead">
+  <thead>
+    <tr>
+      <th>Product name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+</template>
+
+<template id="tableRow">
+  <tr data-id="">
+    <td>
+      <div class="table__img">
+        <a href="">
+          <img src="" alt="" data-image="" />
+        </a>
+      </div>
+      <div class="table__desc">
+        <p class="table__title"></p>
+      </div>
+    </td>
+    <td>
+      <span class="table__price"></span>
+    </td>
+    <td>
+      <div class="product__info-quantity table__quantity">
+        <button class="product__info-quantityBtn table__btn" data-minus="">
+          {{> arrowLeftIcon }}
+        </button>
+        <span class="product__info-quantityText" data-quantity=""></span>
+        <button class="product__info-quantityBtn table__btn" data-plus="">
+          {{> arrowRightIcon }}
+        </button>
+      </div>
+    </td>
+    <td>
+      <div>
+        <span class="table__price" data-totalprice=""></span>
+        <button class="shop-cart__btn-delete" data-delete="">
+          {{> deleteBtnIcon }}
+        </button>
+      </div>
+    </td>
+  </tr>
+</template>
