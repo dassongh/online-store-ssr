@@ -11,7 +11,7 @@ import Timer from './timer';
   if (!refs.days) return;
 
   const timer = new Timer({ onTick: updateClockFace });
-  const countDownDate = new Date('April 04, 2022 00:00:00').getTime();
+  const countDownDate = new Date('August 04, 2022 00:00:00').getTime();
 
   timer.date = countDownDate;
   timer.start();
