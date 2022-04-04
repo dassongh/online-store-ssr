@@ -108,9 +108,6 @@ export function renderListProductItem({ image_url, old_price, isNew, id, raiting
   productItem.querySelector('a').setAttribute('href', `/product/:${id}`);
 
   const raitingMarkup = `
-    <div class="clip-star"></div>
-    <div class="clip-star"></div>
-    <div class="clip-star"></div>
     ${
       raiting === 3
         ? `<div class="clip-star clip-star--empty"></div>
@@ -124,7 +121,7 @@ export function renderListProductItem({ image_url, old_price, isNew, id, raiting
         : ''
     }
   `;
-  productItem.querySelector('.raiting').insertAdjacentHTML('afterbegin', raitingMarkup);
+  productItem.querySelector('.raiting').insertAdjacentHTML('beforeend', raitingMarkup);
 
   productItem.querySelector('[data-title]').setAttribute('data-title', `${id}`);
   productItem.querySelector('[data-title]').textContent = `${title}`;
