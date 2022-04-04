@@ -1,13 +1,16 @@
 {
   "name": "valtech-internship",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.14.0"
+  },
   "description": "Personal pet-project for valtech internship",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development npx webpack --mode development",
     "build": "cross-env NODE_ENV=production npx webpack --mode production",
     "watch": "cross-env NODE_ENV=development npx webpack --mode development --watch",
-    "start": "npm run dev && node app.js",
+    "start": "node app.js",
     "heroku-postbuild": "npm run dev"
   },
   "browsersList": ">0.25%, not dead",
