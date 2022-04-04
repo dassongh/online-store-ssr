@@ -10,7 +10,7 @@
     "dev": "cross-env NODE_ENV=development npx webpack --mode development",
     "build": "cross-env NODE_ENV=production npx webpack --mode production",
     "watch": "cross-env NODE_ENV=development npx webpack --mode development --watch",
-    "start": "npx prisma generate && node app.js",
+    "start": "npm run dev && node app.js",
     "heroku-postbuild": "npm run dev"
   },
   "browsersList": ">0.25%, not dead",

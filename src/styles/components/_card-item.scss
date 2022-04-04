@@ -24,8 +24,18 @@
   background-color: #fafafa;
   margin-bottom: 15px;
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 767px) {
     height: 158px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    height: 220px;
+  }
+}
+
+.owl-thumb {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    height: auto;
   }
 }
 
